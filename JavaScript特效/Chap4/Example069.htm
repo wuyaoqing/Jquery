@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+<TITLE>Wipe Transition</TITLE>
+
+<SCRIPT>
+var bTranState = 0;
+function fnToggle() 
+{
+	filterIMG.filters[0].Apply();
+    if (bTranState==0) 
+    { 
+		bTranState = 1;
+		filterIMG.style.visibility="hidden";   
+	}
+    else 
+    {  
+		bTranState = 0;
+		filterIMG.style.visibility="visible";  
+	}
+	filterIMG.filters[0].Play(duration=2);
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<IMG style="FILTER:
+                          progid:DXImageTransform.Microsoft.Wipe( 
+	 GradientSize=1.0,wipeStyle 
+	 =0)" src="images/shuixian.jpg" name=filterIMG >
+
+
+<DIV STYLE="LEFT: 207px; WIDTH: 245px; POSITION: absolute; TOP: 24px; HEIGHT: 144px">
+<B> GradientSize:</B>  
+<SELECT onchange="filterIMG.filters.item(0).gradientSize=&#13;&#10;
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="1.0" selected 
+ >1.0</OPTION>
+<OPTION VALUE="0.9">0.9</OPTION>
+<OPTION VALUE="0.7">0.7</OPTION>
+<OPTION VALUE=".50">0.5</OPTION>
+<OPTION VALUE="0.3">0.3</OPTION>
+<OPTION VALUE="0.1">0.1</OPTION>
+<OPTION VALUE="0.0">0.0</OPTION>
+</SELECT>
+<BR><BR>
+
+<B> WipeStyle:</B>  
+<SELECT onclick="filterIMG.filters.item(0).wipeStyle=&#13;&#10;
+                 this.options[this.selectedIndex].value">
+<OPTION VALUE="0" selected>Left to Right</OPTION>
+<OPTION VALUE="1">Top to Bottom</OPTION>
+</SELECT>
+<BR><BR>
+
+<B> Motion:</B>  
+<SELECT onclick="filterIMG.filters.item(0).motion=&#13;&#10;
+                 this.options[this.selectedIndex].value">
+<OPTION VALUE="forward" selected >Forward</OPTION>
+<OPTION VALUE="reverse">Reverse</OPTION>
+</SELECT>
+<BR><BR>
+
+<BUTTON onclick="fnToggle()">Toggle Transition</BUTTON>
+</DIV>
+</BODY>
+</HTML>
+

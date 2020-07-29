@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+function Inc_onclick() 
+{
+	oDiv.filters.item('DXImageTransform.Microsoft.blur').pixelradius++;
+
+}
+
+function Dec_onclick() 
+{
+	oDiv.filters.item('DXImageTransform.Microsoft.blur').pixelradius--;
+}
+
+function Text_onkeyup() 
+{
+	oDiv.innerText=Text.value; 
+}
+
+function window_onload() 
+{
+	oDiv.style.fontSize=50;  
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY bgColor=lightgoldenrodyellow LANGUAGE=javascript 
+      onload="return window_onload()">
+
+<P>отй╬нд╠╬: 
+<INPUT name=Text LANGUAGE=javascript 
+       onkeyup="return Text_onkeyup()" 
+       style="WIDTH: 193px; HEIGHT: 22px" size=24>
+</P>
+<DIV ID="oDiv" 
+     STYLE="FILTER: progid:DXImageTransform.Microsoft.blur(pixelradius =0, 
+                    enabled='true'); 
+            LEFT: 12px; WIDTH: 261px; POSITION: absolute; 
+            TOP: 97px; HEIGHT: 66px">
+</DIV>
+<INPUT style="WIDTH: 24px; HEIGHT: 24px" type=button size=28 value=+ 
+       name=Inc LANGUAGE=javascript onclick="return Inc_onclick()">
+<INPUT style="WIDTH: 22px; HEIGHT: 24px" type=button size=23 value=- 
+       name=Dec LANGUAGE=javascript onclick="return Dec_onclick()">
+
+</BODY>
+</HTML>
+

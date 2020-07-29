@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<SCRIPT language=JavaScript>
+	var ctext = "人何在？一帘淡月，仿佛照颜色。";
+	var x = 0;
+	var color=new Array("#f00000", "#ff0000", 
+	                    "#fff000", "#ffff00",	
+	                    "#fffff0", "#ffffff",
+	                    "#0fffff", "#00ffff",
+	                    "#000fff", "#0000ff",
+	                    "#00000f", "#000000");
+
+	document.write('<div id="TempDiv"><center>'+ctext+'</center></div>');
+
+	function chcolor()
+	{ 
+		document.all.TempDiv.style.color = color[x];
+		if(x<color.length-1)
+		{
+			x++;
+		}
+		else
+		{
+			x=0;
+		}
+	}
+	setInterval("chcolor()",200);
+</SCRIPT>
+
+</BODY>
+</HTML>
+

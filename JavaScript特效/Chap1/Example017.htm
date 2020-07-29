@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<SCRIPT>
+var alphaOne ='FF';
+var alphaTwo ='FF';
+</SCRIPT>
+
+<DIV STYLE="LEFT: 270px; WIDTH: 310px; POSITION: absolute; TOP: 45px">
+参数:<BR>
+
+<B> GradientType:&nbsp;&nbsp;</B> 
+<SELECT 
+onchange="filterDIV.filters.item(0).GradientType=this.options[this.selectedIndex].value">
+<OPTION VALUE="0" selected>0</OPTION>
+<OPTION VALUE="1">1</OPTION>
+</SELECT>
+
+<BR><BR><B> StartColorStr</B> <BR>
+Alpha:&nbsp;&nbsp;
+<SELECT  ID="concAlpha1" 
+onchange="alphaOne=this.options[this.selectedIndex].innerText; 
+	conColorVal=this.options[this.selectedIndex].value.concat(startColorSelect.value); 
+    filterDIV.filters.item(0).StartColorStr=conColorVal;">
+
+<OPTION VALUE="#00" >00</OPTION>
+<OPTION VALUE="#20" >20</OPTION>
+<OPTION VALUE="#50" >50</OPTION>
+<OPTION VALUE="#80" >80</OPTION>
+<OPTION VALUE="#A0" >A0</OPTION>
+<OPTION VALUE="#C0" >C0</OPTION>
+<OPTION VALUE="#FF" selected>FF</OPTION>
+</SELECT>
+
+&nbsp;&nbsp;&nbsp;Color:&nbsp;&nbsp;
+<SELECT ID="startColorSelect" 
+onchange="filterDIV.filters.item(0).StartColorStr=
+         '#'.concat(alphaOne).concat(this.options[this.selectedIndex].value)">
+<OPTION VALUE="0000FF" selected >Default</OPTION>
+<OPTION VALUE="99CCFF" >#99CCFF</OPTION>
+<OPTION VALUE="FF3300" >#FF3300</OPTION>
+<OPTION VALUE="FFCC00" >#FFCC00</OPTION>
+<OPTION VALUE="99FF33" >#99FF33</OPTION>
+<OPTION VALUE="000000" >#000000</OPTION>
+<OPTION VALUE="CC3300" >#CC3300</OPTION>
+<OPTION VALUE="006600" >#006600</OPTION>
+<OPTION VALUE="000066" >#000066</OPTION>
+</SELECT>
+
+
+<BR><BR>
+<B> EndColorStr&nbsp;&nbsp;</B> <BR>
+Alpha:&nbsp;&nbsp;
+<SELECT  ID="concAlpha2" 
+onchange="alphaTwo=this.options[this.selectedIndex].innerText; 
+    conColorVal=this.options[this.selectedIndex].value.concat(endColorSelect.value); 
+    filterDIV.filters.item(0).EndColorStr=conColorVal;">
+<OPTION VALUE="#00" >00</OPTION>
+<OPTION VALUE="#20" >20</OPTION>
+<OPTION VALUE="#50" >50</OPTION>
+<OPTION VALUE="#80" >80</OPTION>
+<OPTION VALUE="#A0" >A0</OPTION>
+<OPTION VALUE="#C0" >C0</OPTION>
+<OPTION VALUE="#FF" selected>FF</OPTION>
+</SELECT>
+
+&nbsp;&nbsp;&nbsp;Color:&nbsp;&nbsp;
+<SELECT ID="endColorSelect" 
+onchange="filterDIV.filters.item(0).EndColorStr=
+         '#'.concat(alphaTwo).concat(this.options[this.selectedIndex].value)">
+<OPTION VALUE="000000" selected >Default</OPTION>
+<OPTION VALUE="99CCFF" >#99CCFF</OPTION>
+<OPTION VALUE="FF3300" >#FF3300</OPTION>
+<OPTION VALUE="FFCC00" >#FFCC00</OPTION>
+<OPTION VALUE="99FF33" >#99FF33</OPTION>
+<OPTION VALUE="000000" >#000000</OPTION>
+<OPTION VALUE="CC3300" >#CC3300</OPTION>
+<OPTION VALUE="006600" >#006600</OPTION>
+<OPTION VALUE="000066" >#000066</OPTION>
+</SELECT>
+
+<BR><BR>
+</DIV> 
+
+<DIV ID="filterDIV" 
+	 STYLE="FONT-SIZE: 15pt; Z-INDEX: 1; 
+	        FILTER: progid:DXImageTransform.Microsoft.gradient(); 
+	        LEFT: 26px;WIDTH: 240px;
+	        COLOR: mediumblue; POSITION: absolute; 
+	        TOP: 31px; HEIGHT: 180px; TEXT-ALIGN: center">
+</DIV> 
+<DIV  STYLE="FONT-SIZE: 15pt;  LEFT: 10px; WIDTH: 240px; COLOR: black; 
+       POSITION: absolute; TOP: 40px; HEIGHT: 180px; TEXT-ALIGN: center">
+慈母手中线，<br>
+游子身上衣。<br>
+临行密密缝，<br>
+意恐迟迟归。<br>
+谁言寸草心，<br>
+报得三春晖。
+</DIV> 
+
+</BODY>
+</HTML>
+

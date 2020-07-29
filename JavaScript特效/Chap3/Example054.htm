@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<SCRIPT Language="JavaScript">
+<!--
+function PopIt(title, msg, url)
+{  
+    var str1 ="<TITLE>" + title + "</TITLE>\n";
+    str1=str1+"<BODY BGCOLOR='ffffff'>\n";
+    str1=str1+"<FONT SIZE=4><FONT COLOR='FF0000'>\n";
+    str1=str1+"<B>"+msg+"</B></FONT>\n";
+    str1=str1+"<FORM>\n";
+    str1=str1+"<INPUT TYPE='BUTTON' VALUE='Close' onClick='self.close()'>\n";
+    str1=str1+"<INPUT TYPE='BUTTON' VALUE='Go'";
+    str1=str1+" onClick='window.open(\""+url+"\")'>\n";
+    str1=str1+"</FORM>\n";
+    str1=str1+"</BODY>\n";         
+         
+    var popup = window.open("","popDialog","height=200,width=300,scrollbars=no");  
+    popup.document.write(str1);  
+    popup.document.close();
+}
+// -->
+</SCRIPT>
+
+<A HREF="JavaScript:PopIt('创作组','精锐创作组','http://localhost')">创作组</A>
+<BR>
+<A HREF="JavaScript:PopIt('出版社','电子工业出版社','http://www.phei.com.cn')">
+	出版社
+</A>
+<BR>
+</BODY>
+</HTML>
+

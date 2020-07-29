@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<SCRIPT Language="JavaScript">
+var x=50,y=50;
+var step=5;
+var timer;
+var radius=50;
+var imgnumber=6;
+var imgsrc="images\\eye.gif"
+var xcenter;
+var ycenter;
+var pi=Math.PI;
+
+function round()
+{
+	startwinkel=step;
+	for(i=1;i<=imgnumber;i++)
+	{
+		var thisspan=eval("document.all.span"+(i)+".style");
+		thisspan.posLeft=radius*Math.cos(startwinkel*pi/180)+x;	
+		thisspan.posTop=radius*Math.sin(startwinkel*pi/180)+y;
+		startwinkel=startwinkel+360/imgnumber; 	
+	}
+	step=step+5;
+	timer=setTimeout("round()",50);
+}
+
+function MouseMove()
+{
+	clearTimeout(timer);
+	x=event.clientX;
+	y=event.clientY;
+	round();
+}
+document.onmousemove=MouseMove;
+
+</SCRIPT>
+
+</HEAD>
+<BODY>
+<style>
+	.spanstyle
+	{
+		position:absolute;visibility:visible;
+		top:50px;font-size:10pt;
+		font-famify:Verdana;
+		color:FF0000
+	}
+</style>
+<P>&nbsp;</P>
+<SCRIPT Language="JavaScript">
+	for(i=1;i<=imgnumber;i++)
+	{
+		document.write("<span id='span"+i+"'class='spanstyle'>");
+		document.write("<img src='"+imgsrc+"'>"); 
+		document.write("</span>"); 
+	}
+	 
+</SCRIPT>
+</BODY>
+</HTML>
+

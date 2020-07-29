@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY onload="mnuDIV.filters.wave.enabled=true;MoveMenu();">
+
+<SCRIPT Language="JavaScript">
+<!--
+var phase=0;
+function MoveMenu()
+{
+	phase=phase+10;
+	if (phase>350)
+	{
+		phase=0;
+	}
+	mnuDIV.filters.wave.phase=phase;
+	setTimeout("MoveMenu()",100);
+}
+//-->
+</SCRIPT>
+
+<DIV id="mnuDIV" style="FILTER: wave(freq=1,LightStrength=10,
+                                     Strength=6,enabled=false);
+                        LEFT: 12px; WIDTH: 127px; POSITION: absolute; 
+                        TOP: 35px; HEIGHT: 64px; BACKGROUND-COLOR: gold">
+<A id=a1 href="http://www.phei.com.cn">电子工业出版社</A><BR><BR>
+<A href="http://tqxbook.phei.com.cn/">天启星图书</A>
+</DIV>
+</BODY>
+</HTML>
+
+
+
+

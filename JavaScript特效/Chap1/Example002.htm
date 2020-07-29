@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var text="ºèÑã²»¿°³îÀïÌý"
+var pos = 0;
+var len = text.length;
+function viewtext() 
+{
+	tickfield.value = text.substring(0, pos) + "_";
+	if(pos++ == len) 
+	{
+		pos = 0; 
+		setTimeout("viewtext()", 1000); 
+	} 
+	else
+	{
+		setTimeout("viewtext()", 200);
+	}
+}
+</script>
+</HEAD>
+
+<body bgcolor="#fef4d9" OnLoad="viewtext()">
+<TEXTAREA id=tickfield 
+          style="COLOR: rgb(255,255,255); BACKGROUND-COLOR: rgb(0,0,0)" >
+</TEXTAREA>
+</body>
+</HTML>
+

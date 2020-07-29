@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<SCRIPT Language="JavaScript">
+	var msg="ÖèÓê³õĞª";
+	var width=30;
+	var pos=0;
+	window.status=msg; 
+</SCRIPT>
+</HEAD>
+<BODY>
+
+<P>&nbsp;</P>
+<SCRIPT language="JavaScript">
+<!--
+function moveToRight()
+{
+	pos=pos+1;
+	window.status=" "+window.status;
+	if (pos>width-msg.length)
+	{
+		pos=0;
+		moveToLeft();
+	}
+	else
+		setTimeout("moveToRight()",20);
+	
+}
+
+function moveToLeft()
+{
+	pos=pos+1;
+	window.status=window.status.substr(1);
+	if (pos>width-msg.length)
+	{
+		pos=0;
+		moveToRight();
+	}
+	else
+		setTimeout("moveToLeft()",20);
+}
+
+moveToRight();
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>
+

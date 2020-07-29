@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+您在本站逗留了<input type="text" name="stay" size="15" style="border: 0 ">
+<SCRIPT Language="JavaScript">
+<!--
+var second=0;
+var minute=0;
+var hour=0;
+window.setTimeout("staytime();",1000);
+function staytime()
+{
+	second++;
+	if(second==60){second=0;minute+=1;}
+	if(minute==60){minute=0;hour+=1;}
+	stay.value=hour+"小时"+minute+"分"+second+"秒";
+	window.setTimeout("staytime();",1000);
+}
+//-->
+</SCRIPT>
+</BODY>
+</HTML>
+

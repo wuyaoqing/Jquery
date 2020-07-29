@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<SCRIPT Language="JavaScript">
+var msg  = "心似双丝网，中有千千结。" ;
+var interval = 200
+var index=0;
+	
+function Scroll() 
+{
+	window.status = msg.substring(0, index+1);
+	index++;
+	if (index>msg.length) 
+	{ 
+		index = 0; 
+		window.status = '';
+	}
+	window.setTimeout("Scroll();", interval );
+} 
+Scroll();
+</SCRIPT>
+
+</BODY>
+</HTML>
+

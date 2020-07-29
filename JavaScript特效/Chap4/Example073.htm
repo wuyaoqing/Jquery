@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+<TITLE>RadialWipe Transition</TITLE>
+
+<SCRIPT>
+var bTranState = 0;
+function fnToggle() 
+{
+	oTransContainer.filters[0].Apply();
+    if (bTranState==0) 
+    { 
+		bTranState = 1;
+        image2.style.visibility="visible"; 
+		image1.style.visibility="hidden";   
+	}
+    else 
+    {  
+		bTranState = 0;
+        image2.style.visibility="hidden"; 
+		image1.style.visibility="visible";  
+	}
+   	oTransContainer.filters[0].Play();
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<B> WipeStyle:</B>  
+<SELECT onchange="oTransContainer.filters.item(0).wipeStyle=
+                  this.options[this.selectedIndex].value;
+                  fnToggle()">
+<OPTION VALUE="clock" selected>Clock</OPTION>
+<OPTION VALUE="wedge">Wedge</OPTION>
+<OPTION VALUE="radial">Radial</OPTION>
+</SELECT>
+
+<DIV ID="oTransContainer" 
+     STYLE="FILTER: progid:DXImageTransform.Microsoft.RadialWipe();   
+            LEFT: 10px; WIDTH: 180px; POSITION: absolute; 
+            TOP: 40px;height:240px">
+<IMG style="POSITION: absolute"
+	 src="images/malian.jpg" 
+	 name=image1 >
+<IMG style="LEFT:4px;VISIBILITY: hidden; POSITION: absolute; TOP: 59px" 
+     src="images/fruit.jpg" 
+     name=image2 >
+</DIV> 
+</BODY>
+</HTML>
+

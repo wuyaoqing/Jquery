@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebApplication", "http://localhost/WebApplication/WebApplication.vbproj", "{6B94AF74-F9FA-4158-9DAF-8E9C5075993F}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B94AF74-F9FA-4158-9DAF-8E9C5075993F}.Debug|Default.ActiveCfg = Debug|.NET
+		{6B94AF74-F9FA-4158-9DAF-8E9C5075993F}.Debug|Default.Build.0 = Debug|.NET
+		{6B94AF74-F9FA-4158-9DAF-8E9C5075993F}.Release|Default.ActiveCfg = Release|.NET
+		{6B94AF74-F9FA-4158-9DAF-8E9C5075993F}.Release|Default.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

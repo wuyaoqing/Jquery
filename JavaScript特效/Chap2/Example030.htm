@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<STYLE>
+<!--
+	#leftright,#topdown
+	{
+		position:absolute;left:0;top:0;width:1px;height:1px;
+		font-size:1px;background-color:blue;z-index:100
+	}
+-->
+</STYLE>
+</HEAD>
+<BODY>
+
+<P>&nbsp;</P>
+<DIV ID="leftright">
+</DIV>
+<DIV ID="topdown">
+</DIV>
+<SCRIPT>
+<!--
+	leftright.style.width=document.body.clientWidth;    
+	topdown.style.height=document.body.clientHeight;     
+
+	function followmouse()
+	{
+		leftright.style.pixelTop=event.clientY-2;
+		topdown.style.pixelLeft=event.clientX-2; 
+	}
+	document.onmousemove=followmouse; 
+//-->
+</SCRIPT>
+</BODY>
+</HTML>
+

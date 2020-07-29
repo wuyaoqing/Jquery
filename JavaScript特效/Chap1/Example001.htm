@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<SCRIPT>
+function Draw(text) 
+{
+    if (document.all) 
+    {
+        content.filters[0].apply()
+        content.innerHTML = "<span style='color:FF0000;font-size:40pt;"+
+                            "filter: revealTrans(Transition=12, Duration=3)'>"+
+                            text+
+                            "</span>"
+        content.filters[0].play()
+    } 
+}
+</SCRIPT>
+
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+function Button1_onclick() 
+{
+	Draw(Input1.value) 
+}
+
+function Button2_onclick() 
+{
+	Draw("")
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY bgColor=lightgoldenrodyellow>
+	<DIV id=content 
+		style="FILTER: revealTrans(Transition=12, Duration=2); LEFT: 21px; WIDTH: 371px; 
+		       POSITION: absolute; TOP: 118px; HEIGHT: 131px; TEXT-ALIGN: center">
+		</DIV>
+<P>
+<INPUT id=Input1 style="WIDTH: 164px; HEIGHT: 22px" size=21> </P>
+<P>
+<INPUT id=Button1 name=Button1 type=button value=淡入效果 
+       LANGUAGE=javascript onclick="return Button1_onclick()"> 
+<INPUT id=Button2 type=button value=淡出效果 name=Button2 
+       LANGUAGE=javascript onclick="return Button2_onclick()">
+</P>
+</BODY>
+</HTML>
+

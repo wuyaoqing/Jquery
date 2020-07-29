@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P>&nbsp;</P>
+<SCRIPT>
+var bToggle = 0;
+function fnToggle() 
+{
+    oDiv.filters[0].Apply();      
+    oDiv.filters[0].bands =  Math.random()*3 + 3;    
+    if (bToggle) 
+    {                                                        
+        bToggle = 0;
+		oDiv.filters[0].direction="down"; 
+        oDiv.style.backgroundColor="gold";
+        oDiv.innerText=""; 
+    }
+    else 
+    {
+        bToggle = 1;
+        oDiv.filters[0].direction="up"; 
+        oDiv.style.backgroundColor="white";
+        oDiv.innerText="春城无处不飞花"; 
+    }  
+    oDiv.filters[0].Play(duration=2);
+}
+</SCRIPT>
+
+<BUTTON onclick="fnToggle()"> Transition</BUTTON><BR><BR>
+<DIV ID="oDiv" STYLE="FONT-SIZE: 35px; 
+                      FILTER: progid:DXImageTransform.Microsoft.Blinds(
+                      direction='down');
+                      WIDTH: 250px; HEIGHT: 60px; BACKGROUND-COLOR: gold">
+</DIV>
+
+</BODY>
+</HTML>
+

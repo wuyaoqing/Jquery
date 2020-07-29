@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<SCRIPT>
+var bToggle = 1
+function fnToggle(oObj) 
+{
+    if (bToggle) 
+    {                                                        
+        bToggle = 0;
+        oDiv.filters(0).sizingMethod="image";
+        oObj.innerText='Enlarge It';
+    }
+    else 
+    {
+        bToggle = 1;
+        oDiv.filters(0).sizingMethod="scale";
+        oObj.innerText='Make Normal';
+    }
+}
+</SCRIPT>
+        
+<DIV ID="oDiv" STYLE="position:relative; height:250px; width:250px;         
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src='images/lige.jpg', sizingMethod='scale');" >
+</DIV>
+
+<BR>
+<BUTTON onclick="fnToggle(this);">Make Normal</BUTTON>
+</BODY>
+</HTML>
+

@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>RandomBars Transition</TITLE>
+
+</HEAD>
+
+<BODY>
+<B> Orientation:</B>  
+<SELECT onchange="filterIMG.filters.item(0).orientation=
+                   this.options[this.selectedIndex].value;
+                  fnToggle()">
+<OPTION VALUE="horizontal" selected>Horizontal</OPTION>
+<OPTION VALUE="vertical">Vertical</OPTION>
+</SELECT>
+<BR>
+
+<IMG style="FILTER:progid:DXImageTransform.Microsoft.RandomBars()" 
+     src="images/qianniu.jpg" 
+     name=filterIMG >
+
+<SCRIPT>
+var bTranState = 0;
+function fnToggle() 
+{
+	filterIMG.filters[0].Apply();
+    if (bTranState==0) 
+    { 
+		bTranState = 1;
+		filterIMG.style.visibility="hidden";   
+	}
+    else 
+    {  
+		bTranState = 0;
+		filterIMG.style.visibility="visible";  
+	}
+   	filterIMG.filters[0].Play();
+}
+</SCRIPT>
+</BODY>
+</HTML>
+

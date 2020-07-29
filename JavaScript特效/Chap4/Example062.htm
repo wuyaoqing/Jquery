@@ -1,0 +1,55 @@
+<HEAD>
+<TITLE>Blur Filter</TITLE>
+
+<SCRIPT>
+function fnMakeShadow(oObj)
+{
+	var bSelected = oObj.options[oObj.selectedIndex].value;
+	filterIMG.filters.item('DXImageTransform.Microsoft.Blur').MakeShadow=bSelected; 
+}
+</SCRIPT>
+
+</HEAD>
+<BODY>
+
+<B> PixelRadius:</B> 
+<SELECT onchange="filterIMG.filters.item(&#13;&#10;&#13;&#10;
+                  'DXImageTransform.Microsoft.Blur').PixelRadius=
+                   &#13;&#10;                   &#13;&#10;                   this.options[this.selectedIndex].value">
+<OPTION VALUE="0" selected>0</OPTION>
+<OPTION VALUE="1">1</OPTION>
+<OPTION VALUE="3">3</OPTION>
+<OPTION VALUE="5">5</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="20">20</OPTION>
+</SELECT><BR><BR>
+
+<B> MakeShadow:</B> 
+<SELECT onchange="fnMakeShadow(this);">
+<OPTION VALUE="true">True</OPTION>
+<OPTION VALUE="false" selected>False</OPTION>
+</SELECT>
+<BR><BR>
+
+<B> ShadowOpacity:</B> 
+<SELECT ID=oSelectShadowOpacity 
+        onchange="filterIMG.filters.item(&#13;&#10;&#13;&#10;
+                  'DXImageTransform.Microsoft.Blur').ShadowOpacity=
+                   &#13;&#10;                   &#13;&#10;                   this.options[this.selectedIndex].value">
+<OPTION VALUE="0.00">0.00</OPTION>
+<OPTION VALUE="0.25">0.25</OPTION>
+<OPTION VALUE="0.50">0.50</OPTION>
+<OPTION VALUE="0.75" selected>0.75</OPTION>
+<OPTION VALUE="1.00">1.00</OPTION>
+</SELECT>
+
+
+<IMG style="FILTER: progid:DXImageTransform.Microsoft.Blur( PixelRadius =0, 
+                                                           MakeShadow=false, 
+                                                           ShadowOpacity=.75); 
+			LEFT: 220px; POSITION: absolute; TOP: 5px" 
+     height=118 
+     src="images/yushu.jpg" width=161 name=filterIMG >
+</BODY>
+</HTML>
+

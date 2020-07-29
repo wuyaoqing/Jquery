@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<IMG name=filterIMG
+	 src="images/yushu.jpg"
+	 style="filter:Light(enabled='false')">
+
+<SCRIPT>
+   filterIMG.filters[0].enabled="true";	
+   var iX2=filterIMG.offsetWidth;
+   var iY2=filterIMG.offsetHeight;
+   filterIMG.filters[0].addCone(0,0,1,iX2,iY2,255,255,0,20,90);
+</SCRIPT>		
+</BODY>
+</HTML>
+

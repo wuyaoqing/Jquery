@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<TITLE>Using a Matrix Transform</TITLE>
+<SCRIPT Language="JavaScript">
+deg2rad = Math.PI * 2 / 360;
+
+function SetRotation(deg)
+{
+    rad = deg * deg2rad;
+
+    costheta = Math.cos(rad);
+    sintheta = Math.sin(rad);
+
+    myimage.filters.item(0).M11 = costheta;
+    myimage.filters.item(0).M12 = -sintheta;
+    myimage.filters.item(0).M21 = sintheta;
+    myimage.filters.item(0).M22 = costheta;
+}
+</SCRIPT>
+</HEAD>
+
+<BODY onload="GetCurrentMatrix()" scroll="no">
+Rotation: (0-360 degrees)<BR>
+<INPUT id="rotation" style="WIDTH: 100px"></INPUT>
+<BUTTON onclick="SetRotation(rotation.value)">Set Rotation</BUTTON>
+<BR>
+<IMG style="FILTER: progid:DXImageTransform.Microsoft.Matrix(M11='1.0',
+                           sizingmethod='auto expand')" 
+     src="images/shuixian.jpg" 
+     name=myimage >
+</BODY>
+</HTML>
+

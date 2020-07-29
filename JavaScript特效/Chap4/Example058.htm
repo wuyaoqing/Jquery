@@ -1,0 +1,72 @@
+<HEAD>
+<TITLE>Barn Filter</TITLE>
+
+<SCRIPT>
+var bTranState = 0;
+function fnToggle() 
+{
+	oTransContainer.filters[0].Apply();
+    if (bTranState==0) 
+    { 
+		bTranState = 1;
+        oDIV2.style.visibility="visible"; 
+		oDIV1.style.visibility="hidden";   
+	}
+    else 
+    {  
+		bTranState = 0;
+        oDIV2.style.visibility="hidden"; 
+		oDIV1.style.visibility="visible";  
+	}
+	oTransContainer.filters[0].Play();
+}
+</SCRIPT>
+
+</HEAD>
+
+<BODY STYLE="font-family:verdana; font-size:8pt">
+
+<DIV STYLE="position:absolute; top:45; left:270; width:370px">
+<B> Orientation:</B>  
+<SELECT onchange="oTransContainer.filters.item(0).orientation=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="horizontal">Horizontal</OPTION>
+<OPTION VALUE="vertical">Vertical</OPTION>
+</SELECT>
+&nbsp;&nbsp;&nbsp;
+<B>Motion:</B>  
+<SELECT onchange="oTransContainer.filters.item(0).motion=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="out">Out</OPTION>
+<OPTION VALUE="in">In</OPTION>
+</SELECT>
+
+<BR/><BR/><BR/><BUTTON onclick="fnToggle()">Toggle Transition</BUTTON>
+</DIV> 
+
+<DIV ID="oTransContainer" 
+	 STYLE="FILTER: progid:DXImageTransform.Microsoft.barn(
+	 orientation=horizontal, motion=out);   
+	 position:absolute; top:40; left:10; 
+	 width:240px; height:180px; ">
+
+<DIV ID="oDIV1" STYLE="position:absolute; top:0px; left:0px; width:240px; 
+                       height: 180px; background: #666666;  padding:10px; 
+                       font-size:15pt; border:2px solid black;  color:white">
+<IMG SRC="images/smallmouse.jpg"  STYLE="position:absolute; 
+                                         top:110px; left:145px;">
+	Product Details
+</DIV> 
+
+<DIV ID="oDIV2" STYLE="visibility:hidden; position:absolute; top:0px; 
+                       left:0px; width:240px; height: 180px; color:black; 
+                       background: gold;  padding:10px; font-size:15pt; 
+                       border:2px solid black; ">
+<IMG SRC="images/smallanichart.gif" STYLE="position:absolute; top:50; left:15">
+	Market Data
+</DIV> 
+</DIV> 
+
+</BODY>
+</HTML>
+

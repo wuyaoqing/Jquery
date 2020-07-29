@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P>&nbsp;</P>
+
+<SCRIPT Language="JavaScript">
+var msg  = "小舟从此逝，江海寄馀生。";
+var space = 20;
+var flag;
+var newmsg;
+var index;
+var tempmsg;
+
+function init()
+{	
+	newmsg="";
+	tempmsg="";
+	window.status=""; 
+	index=0;
+	flag="";
+	
+	for (i = 0; i < space; i++) 
+	{
+	    flag=flag+"<";
+	}
+		
+	for (i = 0; i < msg.length; i++) 
+	{
+	    newmsg+=flag+msg.charAt(i);
+	}
+}
+	
+function scroll() 
+{
+	if (newmsg.charAt(index)!="<")
+	{
+		newmsg=newmsg.substr(1);
+		tempmsg=tempmsg+msg.charAt(index);
+		index=index+1;
+	}
+	else
+	{
+		newmsg=newmsg.substr(1);
+	}
+	window.status=tempmsg+newmsg;
+	if (index==msg.length)
+	{
+		init();
+	}
+}
+
+init();
+setInterval("scroll()",15);
+</SCRIPT>
+</BODY>
+</HTML>
+

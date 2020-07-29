@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P>&nbsp;</P>
+
+
+<SCRIPT language=JavaScript>
+	function chwave()
+	{ 
+		if(oFilterDIV.filters.item("wave").Strength==2)
+		{
+			oFilterDIV.filters.item("wave").Strength=3;
+		}
+		else
+		{
+			oFilterDIV.filters.item("wave").Strength=2;
+		}
+	}
+	setInterval("chwave()",200);
+</SCRIPT>
+<DIV ID="oFilterDIV" 
+     STYLE="position:relative; width:330; height:50; 
+            filter:wave(Add=0,Freq=5,LightStrength=10,Phase=1,Strength=3)">
+     <p>
+     <font color="#FF0000" size=30>问君能有几多愁，恰似一江春水向东流。</font>
+     </p>
+</DIV>
+
+</BODY>
+</HTML>
+

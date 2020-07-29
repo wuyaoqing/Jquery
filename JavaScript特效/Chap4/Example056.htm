@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+
+<SCRIPT>
+function fnEnable(iIndex)
+{
+  if (iIndex!=0)
+  {
+	oSelFinOpa.disabled=false;
+  }
+  else
+  {
+	oSelFinOpa.disabled=true;
+  }
+  
+  if (iIndex==1)
+  {
+	oSelSX.disabled=false;
+	oSelSY.disabled=false;
+	oSelFX.disabled=false;
+	oSelFY.disabled=false;
+  }
+  else
+  {
+	oSelSX.disabled=true;
+	oSelSY.disabled=true;
+	oSelFX.disabled=true;
+	oSelFY.disabled=true;
+  }
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<DIV STYLE="LEFT: 270px; WIDTH: 400px; POSITION: absolute; TOP: 45px">
+<B> Style:&nbsp;&nbsp;</B> 
+<SELECT onchange="fnEnable(this.options[this.selectedIndex].value);
+                  filterDIV.filters.item('DXImageTransform.Microsoft.Alpha').Style=
+                  this.options[this.selectedIndex].value">
+
+<OPTION VALUE="0">0 - Uniform</OPTION>
+<OPTION VALUE="1" SELECTED>1 - Linear</OPTION>
+<OPTION VALUE="2">2 - Radial</OPTION>
+<OPTION VALUE="3">3 - Rectangular</OPTION>
+</SELECT>
+<BR>
+<BR>
+<B> Opacity:&nbsp;&nbsp;</B> 
+<SELECT onchange="filterDIV.filters.item
+                  ('DXImageTransform.Microsoft.Alpha').opacity=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="0">0</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="40">40</OPTION>
+<OPTION VALUE="50">50</OPTION>
+<OPTION VALUE="60">60</OPTION>
+<OPTION VALUE="70">70</OPTION>
+<OPTION VALUE="80">80</OPTION>
+<OPTION VALUE="90">90</OPTION>
+<OPTION VALUE="100" SELECTED>100</OPTION>
+</SELECT>&nbsp;&nbsp;&nbsp;
+
+<B> FinishOpacity:&nbsp;&nbsp;</B> 
+<SELECT ID="oSelFinOpa" onchange="filterDIV.filters.item
+                            ('DXImageTransform.Microsoft.Alpha').finishopacity=
+                            this.options[this.selectedIndex].value">
+<OPTION VALUE="0" SELECTED>0</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="40">40</OPTION>
+<OPTION VALUE="50">50</OPTION>
+<OPTION VALUE="60">60</OPTION>
+<OPTION VALUE="70">70</OPTION>
+<OPTION VALUE="80">80</OPTION>
+<OPTION VALUE="90">90</OPTION>
+<OPTION VALUE="100">100</OPTION>
+</SELECT>&nbsp;&nbsp;&nbsp;
+<BR><BR>
+<B> StartX:&nbsp;&nbsp;</B> 
+<SELECT ID="oSelSX" onchange="filterDIV.filters.item
+                             ('DXImageTransform.Microsoft.Alpha').startx=
+                             this.options[this.selectedIndex].value" >
+<OPTION VALUE="0" SELECTED>0</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="40">40</OPTION>
+<OPTION VALUE="50">50</OPTION>
+<OPTION VALUE="60">60</OPTION>
+<OPTION VALUE="70">70</OPTION>
+<OPTION VALUE="80">80</OPTION>
+<OPTION VALUE="90">90</OPTION>
+<OPTION VALUE="100">100</OPTION>
+</SELECT>
+<B> FinishX:&nbsp;&nbsp;</B> 
+<SELECT ID="oSelFX" onchange="filterDIV.filters.item
+                              ('DXImageTransform.Microsoft.Alpha').finishx=
+                              this.options[this.selectedIndex].value" >
+<OPTION VALUE="0">0</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="40">40</OPTION>
+<OPTION VALUE="50">50</OPTION>
+<OPTION VALUE="60">60</OPTION>
+<OPTION VALUE="70">70</OPTION>
+<OPTION VALUE="80">80</OPTION>
+<OPTION VALUE="90">90</OPTION>
+<OPTION VALUE="100" SELECTED>100</OPTION>
+</SELECT>
+<BR><BR>
+<B> StartY:&nbsp;&nbsp;</B> 
+<SELECT ID="oSelSY" onchange="filterDIV.filters.item
+                             ('DXImageTransform.Microsoft.Alpha').starty=
+                             this.options[this.selectedIndex].value" >
+<OPTION VALUE="0" SELECTED>0</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="40">40</OPTION>
+<OPTION VALUE="50">50</OPTION>
+<OPTION VALUE="60">60</OPTION>
+<OPTION VALUE="70">70</OPTION>
+<OPTION VALUE="80">80</OPTION>
+<OPTION VALUE="90">90</OPTION>
+<OPTION VALUE="100">100</OPTION>
+</SELECT>
+<B> FinishY:&nbsp;&nbsp;</B> 
+<SELECT ID="oSelFY" onchange="filterDIV.filters.item
+                              ('DXImageTransform.Microsoft.Alpha').finishY=
+                              this.options[this.selectedIndex].value" >
+<OPTION VALUE="0" >0</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="40">40</OPTION>
+<OPTION VALUE="50">50</OPTION>
+<OPTION VALUE="60">60</OPTION>
+<OPTION VALUE="70">70</OPTION>
+<OPTION VALUE="80">80</OPTION>
+<OPTION VALUE="90">90</OPTION>
+<OPTION VALUE="100" SELECTED>100</OPTION>
+</SELECT>
+<BR><BR>
+</DIV> 
+
+<DIV ID="filterDIV" STYLE="position:absolute; top:40; left:10; 
+                           width:240; height: 180; background: green;  
+                           font-size:15pt;
+                           filter:progid:DXImageTransform.Microsoft.Alpha(
+                           Opacity=100, FinishOpacity=0, Style=1, StartX=0,  
+                           FinishX=100, StartY=0, FinishY=100), ; 
+                           color:white; z-index:1"> 
+<IMG SRC="images/fruit.jpg" STYLE="position:absolute; top:45; left:40">
+Delicious Produce!
+</DIV> 
+
+</BODY>
+</HTML>
+

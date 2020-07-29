@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+  <Authors_Table>
+  <authors>
+    <作者ID>172-32-1176</作者ID>
+    <姓>王</姓>
+    <名>静静</名>
+    <城市>上海</城市>
+    <合同>true</合同>
+  </authors>
+  <authors>
+    <作者ID>213-46-8915</作者ID>
+    <姓>王</姓>
+    <名>亮</名>
+    <城市>北京</城市>
+    <合同>true</合同>
+  </authors>
+  <authors>
+    <作者ID>238-95-7769</作者ID>
+    <姓>刘</姓>
+    <名>艳春</名>
+    <城市>哈尔滨</城市>
+    <合同>true</合同>
+  </authors>
+</Authors_Table>

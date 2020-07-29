@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>DropShadow Filter</TITLE>
+</HEAD>
+
+<BODY>
+
+<B> offX:</B> 
+<SELECT onchange="filterIMG.filters.item(0).offX=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="0">0</OPTION>
+<OPTION VALUE="5" SELECTED>5</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="15">15</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+</SELECT>
+
+<B> offY:</B> 
+<SELECT onchange="filterIMG.filters.item(0).offY=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="0">0</OPTION>
+<OPTION VALUE="5" SELECTED>5</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="15">15</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+</SELECT>
+<BR/><BR/>
+
+<B> Color:</B> 
+<SELECT onchange="filterIMG.filters.item(0).color=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="gray">Gray</OPTION>>
+<OPTION VALUE="black">Black</OPTION>
+<OPTION VALUE="Brown">Brown</OPTION>
+<OPTION VALUE="Tomato">Tomato</OPTION>
+<OPTION VALUE="Yellowgreen">Yellow-green</OPTION>
+<OPTION VALUE="Gold">Gold</OPTION>
+</SELECT><BR/><BR/>
+
+<IMG name="filterIMG" src="images/fruit.jpg"
+	 style="filter:progid:DXImageTransform.Microsoft.dropshadow(
+	                      positive='true', color='#666666', 
+	                      offX='5', offY='5')">
+</BODY>
+</HTML>
+

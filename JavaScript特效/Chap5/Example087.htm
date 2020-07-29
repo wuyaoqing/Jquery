@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY onclick="HideMenu();">
+<A onclick="ShowMenu();event.cancelBubble=true;return false;" 
+   href="">点这里看菜单</A>
+
+<SCRIPT Language="JavaScript">
+<!--
+function ShowMenu()
+{
+	if (mnuDIV.style.visibility=="hidden")
+	{
+		mnuDIV.filters[0].apply();
+		mnuDIV.style.visibility="visible";
+		mnuDIV.filters[0].play();
+	}
+	else
+	{
+		HideMenu();
+	}
+}
+
+function HideMenu()
+{
+		mnuDIV.filters[0].apply();
+		mnuDIV.style.visibility="hidden";
+		mnuDIV.filters[0].play();
+}
+
+function zigzagTransChange()
+{
+	mnuDIV.filters[0].GridSizeX=zigzagGridSizeXList.value;
+	mnuDIV.filters[0].GridSizeY=zigzagGridSizeYList.value; 
+}
+
+//-->
+</SCRIPT>
+
+<DIV id="mnuDIV" style="FILTER:progid:DXImageTransform.Microsoft.Zigzag
+                                     (GridSizeX=8,GridSizeY=8); 
+                        LEFT: 12px; VISIBILITY: hidden; POSITION: absolute; 
+                        TOP: 35px; BACKGROUND-COLOR: gold">
+<A href="http://www.phei.com.cn">电子工业出版社</A><BR>
+<A href="http://tqxbook.phei.com.cn/">天启星图书</A><BR>
+<A href="http://www.phei.com.cn">电子工业出版社</A><BR>
+<A href="http://tqxbook.phei.com.cn/">天启星图书</A>
+</DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>
+
+GridSizeX: 
+<SELECT onchange=zigzagTransChange() name=zigzagGridSizeXList> 
+<OPTION value=4>4</OPTION> 
+<OPTION value=8 selected>8</OPTION> 
+<OPTION value=12>12</OPTION> 
+<OPTION value=24>24</OPTION> 
+</SELECT>
+<BR>
+GridSizeY: 
+<SELECT onchange=zigzagTransChange() name=zigzagGridSizeYList> 
+<OPTION value=4>4</OPTION> 
+<OPTION value=8 selected>8</OPTION> 
+<OPTION value=12>12</OPTION> 
+<OPTION value=24>24</OPTION> 
+</SELECT> </P>
+</BODY>
+</HTML>
+
+
+
+

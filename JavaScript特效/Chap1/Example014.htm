@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+function mirror_onclick() 
+{
+	if (mirror.checked)
+	{ 
+		oDiv.style.filter="progid:DXImageTransform.Microsoft.BasicImage(mirror=1)";
+	}
+	else
+	{
+		oDiv.style.filter="";
+	}
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<DIV ID="oDiv" STYLE="LEFT: 128px; POSITION: absolute; TOP: 72px">
+        人面桃花相映红
+</DIV>
+<P style="BACKGROUND-COLOR: lightgoldenrodyellow">
+<INPUT type=checkbox name=mirror LANGUAGE=javascript 
+       onclick="return mirror_onclick()">镜像效果
+<BR><BR><BR>人面桃花相映红<BR><BR><BR>&nbsp;</P>
+</BODY>
+</HTML>
+

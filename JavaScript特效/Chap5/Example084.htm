@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<A onmouseleave=HideMenu() onmouseenter=ShowMenu() href="">
+   移动到这里看菜单</A>
+
+<SCRIPT Language="JavaScript">
+<!--
+function ShowMenu()
+{
+	mnuDIV.style.visibility="visible";
+}
+
+function HideMenu()
+{
+	mnuDIV.style.visibility="hidden";
+}
+//-->
+</SCRIPT>
+
+<DIV id="mnuDIV" style="LEFT: 10px; VISIBILITY: hidden; 
+                        WIDTH: 129px; POSITION: absolute; 
+                        TOP: 32px; HEIGHT: 38px; 
+                        BACKGROUND-COLOR: gold" 
+                        onmouseenter=ShowMenu() 
+                        onmouseleave=HideMenu()>
+<A href="http://www.phei.com.cn">电子工业出版社</A><BR>
+<A href="http://tqxbook.phei.com.cn/">天启星图书</A>
+</DIV>
+</BODY>
+</HTML>
+
+
+
+

@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<TITLE>Checkerboard Transition</TITLE>
+<SCRIPT>
+var bTranState = 0;
+function fnToggle() 
+{
+	filterIMG.filters[0].Apply();
+    if (bTranState==0) 
+    { 
+		bTranState = 1;
+		filterIMG.style.visibility="hidden";   
+	}
+    else 
+    {  
+		bTranState = 0;
+		filterIMG.style.visibility="visible";  
+	}
+	filterIMG.filters[0].Play();
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<B> squaresX:</B>  
+<SELECT onchange="filterIMG.filters.item(0).squaresX=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="2">2</OPTION>
+<OPTION VALUE="4">4</OPTION>
+<OPTION VALUE="8">8</OPTION>
+<OPTION VALUE="12" selected>12</OPTION>
+</SELECT>&nbsp;&nbsp;&nbsp;
+
+<B> squaresY:</B>  
+<SELECT onchange="filterIMG.filters.item(0).squaresY=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="2">2</OPTION>
+<OPTION VALUE="4">4</OPTION>
+<OPTION VALUE="8" selected>8</OPTION>
+<OPTION VALUE="12">12</OPTION>
+</SELECT>
+&nbsp;&nbsp;&nbsp;<BR><BR>
+<B> Duration:</B>  
+<SELECT onchange="filterIMG.filters.item(0).duration=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="1" selected>1</OPTION>
+<OPTION VALUE="2">2</OPTION>
+<OPTION VALUE="3">3</OPTION>
+<OPTION VALUE="4">4</OPTION>
+</SELECT>
+&nbsp;&nbsp;&nbsp;
+<B> Direction:</B>  
+<SELECT onchange="filterIMG.filters.item(0).direction=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="up">Up</OPTION>
+<OPTION VALUE="down">Down</OPTION>
+<OPTION VALUE="left">Left</OPTION>
+<OPTION VALUE="right" selected>Right</OPTION>
+</SELECT>
+<BR><BR><BR>
+<BUTTON onclick="fnToggle()">Toggle Transition</BUTTON> 
+<DIV></DIV> 
+
+<IMG style="FILTER:  
+	 progid:DXImageTransform.Microsoft.Checkerboard( 
+	                       Direction=right,SquaresX=12,
+	                       SquaresY=8, Duration=1)"
+	 src="images/chart.gif" 
+	 name=filterIMG >
+
+</BODY>
+</HTML>
+

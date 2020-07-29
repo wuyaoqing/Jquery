@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P>&nbsp;</P>
+<SCRIPT Language="JavaScript">
+	doClock();
+	function doClock() 
+	{
+		window.setTimeout( "doClock()", 500);
+		today = new Date();
+		self.status = today.toLocaleString();
+    }
+</SCRIPT>
+</BODY>
+</HTML>
+

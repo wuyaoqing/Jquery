@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<INPUT id="rotation" style="WIDTH: 100px"></INPUT>
+<BUTTON onclick="SetRotation(rotation.value)">Set Rotation</BUTTON>
+<DIV ID="mydiv" 
+	 STYLE="FONT-SIZE: 25px; 
+	        FILTER: progid:DXImageTransform.Microsoft.Matrix(
+	                M11='1.0', sizingmethod ='auto expand'); 
+	        WIDTH: 238px; HEIGHT: 180px">
+Óñ¹³Ë«ÓïÑà£¬<BR>±¦®LÑî»¨×ª¡£<BR>¼¸´¦ô¤Ç®Éù£¬<BR>ÂÌ´°´ºË¯Çá¡£
+</DIV>
+
+<SCRIPT>
+deg2rad = Math.PI * 2 / 360;
+
+function SetRotation(deg)
+{
+    rad = deg * deg2rad;
+
+    costheta = Math.cos(rad);
+    sintheta = Math.sin(rad);
+
+    mydiv.filters.item(0).M11 = costheta;
+    mydiv.filters.item(0).M12 = -sintheta;
+    mydiv.filters.item(0).M21 = sintheta;
+    mydiv.filters.item(0).M22 = costheta;
+}
+</SCRIPT>
+</BODY>
+</HTML>
+

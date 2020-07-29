@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<SCRIPT language="JavaScript">
+<!--
+var hex=new Array(16);
+hex[1]="0";  hex[2]="1";  hex[3]="2";  hex[4]="3"; 
+hex[5]="4";  hex[6]="5";  hex[7]="6";  hex[8]="7"; 
+hex[9]="8";  hex[10]="9"; hex[11]="A"; hex[12]="B"; 
+hex[13]="C"; hex[14]="D"; hex[15]="E"; hex[16]="F";
+
+function ToHex(x)
+{ 
+   var high=x/16;
+   var s=high+""; 
+   s=s.substring(0,2);  
+   high=parseInt(s,10); 
+   var left=hex[high+1]; 
+   var low=x-high*16;
+   s=low+"";
+   s=s.substring(0,2);
+   low=parseInt(s,10);
+   var right=hex[low+1];
+   var string=left+""+right;
+   return string;
+}
+
+function rainbow(text)
+{
+	color_d1=255;                               
+	mul=color_d1/text.length;
+	for(i=0;i<text.length;i++)
+	{
+		color_d1=255*Math.sin(i/(text.length/3)); 
+		color_h1=ToHex(color_d1);
+		color_d2=mul*i;
+		color_h2=ToHex(color_d2);
+		document.write("<FONT COLOR='#FF"+color_h1+color_h2+"'>"+
+		               text.substring(i,i+1)+'</FONT>');
+		document.write("<FONT COLOR='#0F"+color_h1+color_h2+"'>"+
+		               text.substring(i,i+1)+'</FONT>');
+		document.write("<FONT COLOR='#CC"+color_h1+color_h2+"'>"+
+		               text.substring(i,i+1)+'</FONT>');
+		document.write("<BR>") 
+	}
+}
+// -->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+		rainbow("十里杨州，三生杜牧，前事休说。");
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>
+

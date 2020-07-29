@@ -1,0 +1,16 @@
+<Advertisements>
+   <Ad>
+      <ImageUrl>.\images\banner1.gif</ImageUrl>
+      <NavigateUrl>http://www.microsoft.com</NavigateUrl>
+      <AlternateText> Microsoft </AlternateText>
+      <Keyword>Computers</Keyword>
+      <Impressions>80</Impressions>
+   </Ad>
+   <Ad>
+      <ImageUrl>.\images\banner2.gif</ImageUrl>
+      <NavigateUrl>http://www.phei.com.cn</NavigateUrl>
+      <AlternateText>Phei</AlternateText>
+      <Keyword>Book</Keyword>
+      <Impressions>60</Impressions>
+   </Ad>
+</Advertisements>

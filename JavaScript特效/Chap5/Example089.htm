@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<P>
+<A id="link" onmouseleave=HideMenu() onmouseenter=ShowMenu() href="">
+   移动到这里看菜单</A> </P>
+<P>&nbsp;</P>
+
+<DIV id="mnuDIV" onmouseleave=HideMenu() onmouseenter=ShowMenu()
+     style="FILTER:progid:DXImageTransform.Microsoft.Stretch(stretchstyle=spin);  
+            LEFT: 10px; VISIBILITY: hidden;WIDTH: 129px; 
+            POSITION: absolute; TOP: 32px; 
+            HEIGHT: 38px;BACKGROUND-COLOR: gold" >
+<A id="link" href="http://www.phei.com.cn">电子工业出版社</A><BR>
+<A href="http://tqxbook.phei.com.cn/">天启星图书</A><BR>
+</DIV>
+<SCRIPT Language="JavaScript">
+<!--
+
+function ShowMenu()
+{
+	if (mnuDIV.style.visibility=="hidden")
+	{  
+		mnuDIV.filters[0].apply();
+		mnuDIV.style.visibility="visible";
+		mnuDIV.filters[0].play(); 
+	}
+}
+
+function HideMenu()
+{
+	if(window.event.toElement.id!="mnuDIV" && window.event.toElement.id!="link")
+	{
+		mnuDIV.filters[0].stop();
+		mnuDIV.style.visibility="hidden";
+	}
+}
+//-->
+</SCRIPT></BODY>
+</HTML>
+
+
+
+

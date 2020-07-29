@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+var left =	100;
+var top =	100;
+var width =	200;
+var first = true;
+var right = left + width;
+var pos = right;
+
+function tickinit() 
+{
+	ticktext.style.posTop = top;
+	right = left + width;
+	pos = right;
+	setInterval('tick()', 10);
+}
+
+function tick() 
+{
+	pos = pos - 0.5;
+	if (pos < left - right) 
+		pos = right;
+	var cl = left - pos;
+	var cr = right - pos;
+	ticktext.style.posLeft = pos;
+	ticktext.style.posTop = top;
+	ticktext.style.clip = "rect(auto "+cr+" px auto "+cl+" px)";
+	if (first) 
+		ticktext.style.visibility = "visible";
+	first = false;
+}
+// -->
+</script>
+
+</HEAD>
+<body bgcolor="#fef4d9" OnLoad="tickinit()">
+<div id="ticktext" 
+     style="FONT-SIZE: 30pt; LEFT: 44px; VISIBILITY: hidden; FONT-FAMILY: arial; POSITION: absolute; TOP: 76px">
+     <nobr>落花已作风前舞，又送黄昏雨。</nobr>
+</div>
+
+</body>
+</HTML>
+

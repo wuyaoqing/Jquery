@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+<TITLE>MotionBlur Filter</TITLE>
+</HEAD>
+
+<BODY>
+<BR><BR>
+<B> Strength:</B>
+<SELECT onchange="filterIMG.filters.item(0).strength=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="0" selected>0</OPTION>
+<OPTION VALUE="5">5</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="50">50</OPTION>
+</SELECT><BR><BR>
+
+<B> Direction:</B>
+<SELECT onchange="filterIMG.filters.item(0).Direction=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="0" selected>0</OPTION>
+<OPTION VALUE="45">45</OPTION>
+<OPTION VALUE="90">90</OPTION>
+<OPTION VALUE="135">135</OPTION>
+<OPTION VALUE="180">180</OPTION>
+<OPTION VALUE="225">225</OPTION>
+<OPTION VALUE="270">270</OPTION>
+<OPTION VALUE="315">315</OPTION>
+</SELECT><BR><BR>
+
+<B> Add:</B>  
+<SELECT onchange="filterIMG.filters.item(0).Add=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="true" selected>True</OPTION>
+<OPTION VALUE="false">False</OPTION>
+</SELECT><BR><BR><BR>
+
+<IMG style="FILTER:progid:DXImageTransform.Microsoft.motionblur(
+                          strength=0, Direction=0, Add =true); 
+            LEFT: 161px; POSITION: absolute; TOP: 51px" 
+     src="images/fruit.jpg" 
+     name=filterIMG >
+</BODY>
+</HTML>
+

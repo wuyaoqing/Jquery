@@ -1,0 +1,42 @@
+<HEAD>
+<TITLE>BlendTrans Transition</TITLE>
+
+<SCRIPT>
+<!--
+function fadeOut(obj) 
+{
+    obj.style.filter="blendTrans(duration=2)";
+	// Make sure filter is not playing.
+	if ((obj.visibility != "hidden") && (obj.filters.blendTrans.status != 2)) 
+	{
+        obj.filters.blendTrans.Apply();
+        obj.style.visibility="hidden";
+	    obj.filters.blendTrans.Play();
+	}
+}
+
+function fadeIn(obj) 
+{
+    obj.style.filter="blendTrans(duration=2)";
+	// Make sure filter is not playing.
+	if ((obj.visibility != "visible") && (obj.filters.blendTrans.status != 2)) 
+	{
+      obj.filters.blendTrans.Apply();
+      obj.style.visibility="visible";
+	  obj.filters.blendTrans.Play();
+	}
+}
+-->
+</SCRIPT>
+
+</HEAD>
+
+<IMG id=oImg src="images/sphere.jpg"></IMG>
+<P>
+<BUTTON onclick="fadeOut(oImg)">Fade Image Out</BUTTON>
+<BUTTON onclick="fadeIn(oImg)">Fade Image In</BUTTON>
+</P>
+<HR>
+</BODY>
+</HTML>
+

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MESSAGES>
+   <MESSAGE id="101">
+      <TO>JoannaF</TO>
+      <FROM>LindaB</FROM>
+      <DATE>04 September 2004</DATE>
+      <SUBJECT>会议地点</SUBJECT>
+      <BODY>你能告诉我明天的会议在哪一个房间举行吗？</BODY>
+   </MESSAGE>
+   <MESSAGE id="123">
+      <TO>JoannaF</TO>
+      <FROM>LindaB</FROM>
+      <DATE>05 September 2004</DATE>
+      <SUBJECT>re: 会议地点</SUBJECT>
+      <BODY>谢谢。顺便说一下，不要忘了带你的笔记本。明天见！</BODY>
+   </MESSAGE>
+</MESSAGES>

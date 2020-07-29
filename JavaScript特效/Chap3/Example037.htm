@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<SCRIPT Language="JavaScript">
+	var pos=50;
+</SCRIPT>
+</HEAD>
+<BODY onLoad="scrollit(pos)">
+
+<P>&nbsp;</P>
+<SCRIPT language="JavaScript">
+<!--
+function scrollit(seed) 
+{
+	var msg="一字无题处 落叶都愁";
+	var out = " ";
+	if (seed > pos) 
+	{
+		seed--;
+		cmd="scrollit("+seed+")";
+		window.setTimeout(cmd,100);
+	}
+	else if (seed <= pos && seed > 0) 
+	{
+		for (i=0 ; i < seed ; i++) 
+		{
+			out+=" ";
+		}
+		out+=msg;
+		seed--;
+		window.status=out;
+		cmd="scrollit("+seed+")";
+		window.setTimeout(cmd,100);
+	}
+	else
+	{
+		if (-seed < msg.length) 
+		{
+			out+=msg.substring(-seed,msg.length);
+			seed--;
+			window.status=out;
+			cmd="scrollit("+seed+")";
+			window.setTimeout(cmd,100);
+		}
+		else 
+		{
+			window.status=" ";
+			window.setTimeout("scrollit(pos)",100);
+		}
+	}
+}
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>
+

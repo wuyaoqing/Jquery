@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+
+function Inc_onclick() 
+{
+	oFilterDIV.filters.item('DXImageTransform.Microsoft.Alpha').opacity=
+	    oFilterDIV.filters.item('DXImageTransform.Microsoft.Alpha').opacity-10
+	
+}
+
+function Dec_onclick() 
+{
+	oFilterDIV.filters.item('DXImageTransform.Microsoft.Alpha').opacity=
+	    oFilterDIV.filters.item('DXImageTransform.Microsoft.Alpha').opacity+10
+}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+<STYLE>
+	INPUT.aFilter 
+	{
+		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	}
+</STYLE>
+
+<DIV ID="oFilterDIV" 
+     STYLE="PADDING-RIGHT: 10px; PADDING-LEFT: 
+            10px; BACKGROUND: green; 
+            FILTER: progid:DXImageTransform.Microsoft.Alpha( 
+                    Opacity =40, FinishOpacity=20, Style=0, 
+                    StartX=0,  FinishX=100, 
+                    StartY=0,  FinishY=100); 
+                    LEFT: 10px; PADDING-BOTTOM: 10px; 
+                    FONT: bold 18pt verdana; 
+                    WIDTH: 240px; PADDING-TOP: 10px; 
+                    POSITION: absolute; 
+                    TOP: 50px; HEIGHT: 160px">
+     凤凰台上凤凰游， 凤去台空江自流。
+     总为浮云能蔽日， 长安不见使人愁。
+</DIV>
+
+<INPUT class=aFilter style="WIDTH: 38px; HEIGHT: 24px" 
+       type=button size=53 value=+ name=Inc 
+       LANGUAGE=javascript onclick="return Inc_onclick()">
+<INPUT class=aFilter style="WIDTH: 38px; HEIGHT: 24px" 
+       type=button size=53 value=- name=Dec 
+       LANGUAGE=javascript onclick="return Dec_onclick()">
+
+<P>&nbsp;</P>
+
+</BODY>
+</HTML>
+

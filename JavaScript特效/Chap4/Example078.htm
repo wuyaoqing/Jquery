@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>Shadow Filter</TITLE>
+</HEAD>
+
+<BODY>
+<B> color:</B> 
+<SELECT onchange="filterIMG.filters.item(
+                   'DXImageTransform.Microsoft.shadow').color=
+                   this.options[this.selectedIndex].value">
+<OPTION VALUE="black">Black</OPTION>>
+<OPTION VALUE="gray" selected>Gray</OPTION>
+<OPTION VALUE="Red">Red</OPTION>
+<OPTION VALUE="Blue">Blue</OPTION>
+<OPTION VALUE="Green">Green</OPTION>
+<OPTION VALUE="Gold">Gold</OPTION>
+</SELECT>
+
+<B> Direction:</B>  
+<SELECT onchange="filterIMG.filters.item(
+                   'DXImageTransform.Microsoft.shadow').Direction=
+                   this.options[this.selectedIndex].value">
+<OPTION VALUE="0">0</OPTION>>
+<OPTION VALUE="45">45</OPTION>
+<OPTION VALUE="90">90</OPTION>
+<OPTION VALUE="135" selected>135</OPTION>
+<OPTION VALUE="180">180</OPTION>
+<OPTION VALUE="225">225</OPTION>
+<OPTION VALUE="270">270</OPTION>
+<OPTION VALUE="315">315</OPTION>
+</SELECT><BR/>
+
+<B> Strength:</B>  
+<SELECT onchange="filterIMG.filters.item(
+                   'DXImageTransform.Microsoft.shadow').Strength=
+                   this.options[this.selectedIndex].value">
+<OPTION VALUE="2">2</OPTION>>
+<OPTION VALUE="4">4</OPTION>
+<OPTION VALUE="8">8</OPTION>
+<OPTION VALUE="16">16</OPTION>
+<OPTION VALUE="32" selected>32</OPTION>
+</SELECT><BR/><BR/>
+
+<IMG SRC="images/fruit.jpg" 
+	 STYLE="filter:progid:DXImageTransform.Microsoft.shadow(
+	                      color='#666666', Direction=135,  Strength=32);"
+	 name=filterIMG>
+
+</BODY>
+</HTML>
+

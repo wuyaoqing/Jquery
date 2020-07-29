@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+<TITLE>Chroma Filter</TITLE>
+</HEAD>
+
+<BODY>
+<B> Color:</B>  
+<SELECT name="select1"
+		onchange="filterIMG.filters.item('DXImageTransform.Microsoft.chroma').color=
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="black">Black</OPTION>
+<OPTION VALUE="tomato">Tomato</OPTION>
+<OPTION VALUE="yellowgreen">Yellow-green</OPTION>
+<OPTION VALUE="gold">Gold</OPTION>
+<OPTION VALUE="#99CCFF">#99CCFF</OPTION>
+<OPTION VALUE="#666666">#666666</OPTION>
+</SELECT><BR><BR>
+
+<IMG style="FILTER:
+     progid:DXImageTransform.Microsoft.chroma(color='')"
+     src="images/chroma.bmp" 
+     name=filterIMG>
+      
+<SCRIPT Language="JavaScript">
+	select1.onchange()
+</SCRIPT>
+</BODY>
+</HTML>
+

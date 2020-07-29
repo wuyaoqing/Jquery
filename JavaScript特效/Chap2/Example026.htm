@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P>&nbsp;</P>
+
+<SCRIPT LANGUAGE="JavaScript">
+	var newtop=0
+	var newleft=0
+
+	function doMouseMove() 
+	{
+		ElementName = 'image';
+
+		var curElement=document.all[ElementName];
+		curElement.style.visibility="visible";
+		height=curElement.style.height;
+		width=curElement.style.width;
+		width=parseInt(width)
+		height=parseInt(height)
+
+		if (event.clientX > (document.body.clientWidth - 5 - width))
+		{
+			newleft=document.body.clientWidth + 
+					document.body.scrollLeft - 5 - width;
+		}
+		else
+		{
+			newleft=document.body.scrollLeft + event.clientX
+		}
+		curElement.style.pixelLeft=newleft;
+
+		if (event.clientY > (document.body.clientHeight - 5 - height))
+		{
+			newtop=	document.body.clientHeight + 
+					document.body.scrollTop - 5 - height;
+		}
+		else
+		{
+			newtop=document.body.scrollTop + event.clientY;
+		}
+		curElement.style.pixelTop=newtop;
+	}
+	
+	document.onmousemove = doMouseMove;
+</SCRIPT>
+
+<SCRIPT language="javascript">
+	document.write('<img ID=image src="images\\1.gif" '+
+						'STYLE="position:absolute;TOP:0pt;LEFT:0pt;width=103;'+
+						'height=28;Z-INDEX:2;visibility:hidden;">')
+</SCRIPT>
+</BODY>
+</HTML>
+

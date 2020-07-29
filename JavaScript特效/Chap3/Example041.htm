@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY OnLoad="explode()">
+
+<P>&nbsp;</P>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- 
+var msg = "青山遮不住，毕竟东流去。";
+var lenmsg = msg.length;
+var msgout = "";
+var delay = 100;
+var i=0;
+var j=0;
+function explode() 
+{
+    i++;
+    msgout = "";
+    for (j=1; j<=(lenmsg/2)-i; j++) 
+    {
+      msgout += " ";
+    } 
+    for (j=1; j<=i; j++) 
+    {
+      msgout += msg.charAt(j-1);
+    }
+    for (j=i; j>=1; j--) 
+    {
+      msgout += msg.charAt(lenmsg-j);
+    }
+    for (j=1; j<=(lenmsg/2)-i; j++) 
+    {
+      msgout += " ";
+    }
+    window.status = msgout;
+    if (i<lenmsg/2) 
+    {
+        setTimeout("explode()",delay);
+    }
+}
+// --> 
+</SCRIPT>
+
+</BODY>
+</HTML>
+

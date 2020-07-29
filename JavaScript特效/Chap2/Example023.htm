@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P>&nbsp;</P>
+
+<script language="JavaScript1.2">
+ 
+//1) 设置显示的内容
+var scroller_msg='平芜尽处是春山，行人更在春山外。'
+if (document.all)
+{
+	document.write(
+		'<marquee id="curscroll" '+
+		' style="position:absolute;width:150px;border:1px solid white;'+
+		' font-size:14px;background-color:white;visibility:hidden">'+
+		scroller_msg+'</marquee>')
+}
+
+function followcursor()
+{
+	curscroll.style.visibility="visible"
+	curscroll.style.left=document.body.scrollLeft+event.clientX+10
+	curscroll.style.top=document.body.scrollTop+event.clientY+10
+}
+
+if (document.all)
+{
+	document.onmousemove=followcursor
+}
+//-->
+ 
+</script>
+</BODY>
+</HTML>
+

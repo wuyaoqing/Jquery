@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><HTML>
+<HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=unicode">
+<META NAME="GENERATOR" Content="MSHTML 6.00.2600.0"  >
+<SCRIPT>
+var intervalID;
+window.status=""; 
+function update()
+{
+	window.status=text1.value;  
+}
+
+function focusin() 
+{
+	intervalID=setInterval("update()", 50);
+}
+
+function focusout() 
+{
+	clearInterval(intervalID);
+}
+//-->
+</SCRIPT>
+</HEAD>
+<BODY>
+
+<P> ‰»Î:&nbsp;<INPUT id=text1 onfocusout=focusout() onfocusin=focusin() 
+                              name="text1">
+</P>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P>&nbsp;</P>
+
+<BUTTON onclick="fnToggle()"> Transition</BUTTON><BR><BR>
+<DIV ID="oDiv" STYLE="FONT-SIZE: 20px; 
+               FILTER: progid:DXImageTransform.Microsoft.CheckerBoard(
+                       duration=1, direction='left'); 
+               WIDTH: 182px; HEIGHT: 179px; 
+               BACKGROUND-COLOR: gold">
+</DIV>
+<SCRIPT>
+var bToggle = 0;
+var str1="\t宣室求贤访逐臣\n\t"; 
+	str1=str1+"贾生才调更无伦。\n\t";
+	str1=str1+"可怜夜半虚前席\n\t";
+	str1=str1+"不问苍生问鬼神";
+var str2="\t人生在世不称意\n\t"; 
+	str2=str2+"明朝散发弄扁舟\n\t";
+	str2=str2+"抽刀断水水更流\n\t";
+	str2=str2+"举杯销愁愁更愁";
+
+function fnToggle() 
+{
+    oDiv.filters[0].Apply();                   
+    if (bToggle) 
+    {                                                        
+        bToggle = 0;
+        oDiv.style.backgroundColor="gold";
+        oDiv.innerText=str1; 
+    }
+    else 
+    {
+        bToggle = 1;
+        oDiv.style.backgroundColor="white";
+        oDiv.innerText=str2; 
+    }  
+    oDiv.filters[0].Play();
+}
+</SCRIPT>
+
+</BODY>
+</HTML>
+

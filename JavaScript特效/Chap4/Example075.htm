@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>Using a Matrix Transform</TITLE>
+<SCRIPT Language="JavaScript">
+var i = 0;
+var deg2rad = Math.PI * 2 / 360;
+
+function SetRotation(deg)
+{
+    rad = deg * deg2rad;
+    costheta = Math.cos(rad);
+    sintheta = Math.sin(rad);
+    myimage.filters.item(0).M11 = costheta;
+    myimage.filters.item(0).M12 = -sintheta;
+    myimage.filters.item(0).M21 = sintheta;
+    myimage.filters.item(0).M22 = costheta;
+}
+
+function DoAnimation()
+{
+    myimage.onfilterchange = DoAnimation;
+    i += 5;
+    if (i > 359)
+    {
+        i = 0;
+        myimage.onfilterchange = null;
+    }
+    SetRotation(i);
+}
+</SCRIPT>
+</HEAD>
+<BODY onload="DoAnimation()"> 
+<IMG style="FILTER: progid:DXImageTransform.Microsoft.Matrix(M11='1.0',
+                           sizingmethod='auto expand')" 
+	 src="images/shuixian.jpg" 
+	 name=myimage >
+</BODY>
+</HTML>
+

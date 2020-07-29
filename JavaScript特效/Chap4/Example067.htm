@@ -1,0 +1,35 @@
+<HTML xmlns:MSHelp=http://msdn.microsoft.com/msHelp>
+<HEAD>
+<TITLE>Fade Transition</TITLE>
+
+<SCRIPT>
+var bTranState = 0;
+function fnToggle() 
+{
+	filterIMG.filters[0].Apply();
+    if (bTranState==0)
+    { 
+		bTranState = 1;
+		filterIMG.style.visibility="hidden";   
+	}
+    else 
+    {  
+		bTranState = 0;
+		filterIMG.style.visibility="visible";  
+	}
+	filterIMG.filters[0].Play();
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<P>&nbsp;
+
+<IMG style="FILTER:progid:DXImageTransform.Microsoft.Fade(duration=3)"
+	 src="images/shuixian.jpg" 
+	 name=filterIMG > </P>
+<P>
+<BUTTON onclick=fnToggle()>Toggle Transition</BUTTON></P>
+</BODY>
+</HTML>
+

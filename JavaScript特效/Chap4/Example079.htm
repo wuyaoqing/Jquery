@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+<TITLE>Wave Filter</TITLE>
+</HEAD>
+<BODY onload="filterIMG.filters.item(0).enabled=true;&#13;&#10;
+              filterIMG.filters.item(0).lightstrength=0">
+
+<DIV STYLE="LEFT: 252px; WIDTH: 182px; POSITION: absolute; 
+            TOP: 17px; HEIGHT: 186px">
+<B> LightStrength:</B> 
+<SELECT onchange="filterIMG.filters.item(0).lightstrength=&#13;&#10;
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="0" selected>0</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="40">40</OPTION>
+<OPTION VALUE="50">50</OPTION>
+<OPTION VALUE="60">60</OPTION>
+<OPTION VALUE="70">70</OPTION>
+<OPTION VALUE="80">80</OPTION>
+<OPTION VALUE="90">90</OPTION>
+<OPTION VALUE="100">100</OPTION>
+</SELECT>
+<BR>
+<BR>
+<B> Phase:</B> 
+<SELECT onchange="filterIMG.filters.item(0).phase=&#13;&#10;
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="0" selected>0</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+<OPTION VALUE="40">40</OPTION>
+<OPTION VALUE="50">50</OPTION>
+<OPTION VALUE="60">60</OPTION>
+<OPTION VALUE="70">70</OPTION>
+<OPTION VALUE="80">80</OPTION>
+<OPTION VALUE="90">90</OPTION>
+<OPTION VALUE="100">100</OPTION>
+</SELECT>
+<BR>
+<BR>
+<B> Strength:</B> 
+<SELECT onchange="filterIMG.filters.item(0).strength=&#13;&#10;
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="0" selected>0</OPTION>
+<OPTION VALUE="2">2</OPTION>
+<OPTION VALUE="5">5</OPTION>
+<OPTION VALUE="10">10</OPTION>
+<OPTION VALUE="20">20</OPTION>
+<OPTION VALUE="30">30</OPTION>
+</SELECT>
+<BR>
+<BR>
+<B> Frequency:</B> 
+<SELECT onchange="filterIMG.filters.item(0).freq=&#13;&#10;
+                  this.options[this.selectedIndex].value">
+<OPTION VALUE="1">1</OPTION>
+<OPTION VALUE="3" SELECTED>3</OPTION>
+<OPTION VALUE="5">5</OPTION>
+<OPTION VALUE="7">7</OPTION>
+<OPTION VALUE="9">9</OPTION>
+<OPTION VALUE="20">20</OPTION>
+</SELECT>
+</DIV> 
+
+<IMG style="FILTER:
+	        progid:DXImageTransform.Microsoft.Wave(enabled  
+	 =false); 
+	 POSITION: absolute" src="images/lige.jpg" name=filterIMG >
+</BODY>
+</HTML>
+

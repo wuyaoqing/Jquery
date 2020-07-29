@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY onload="checkLocation();">
+<SCRIPT language=JavaScript>
+function checkLocation() 
+{
+	x=document.body.clientWidth-RB.width +document.body.scrollLeft; 
+	y=document.body.clientHeight-RB.height +document.body.scrollTop; 
+	RB.style.pixelLeft=x;
+	RB.style.pixelTop=y; 
+	setTimeout("checkLocation()",10);
+}
+</SCRIPT>
+
+<IMG id=RB style="LEFT: 63px; POSITION: absolute; TOP: 33px" 
+     src="images/smallmouse.jpg" >
+<SCRIPT language=JavaScript>
+	for (i=0;i<100;i++)
+	{
+		document.write("<BR>"); 
+	}
+	for (i=0;i<200;i++)
+	{
+		document.write("&nbsp;"); 
+	}
+</SCRIPT>
+</BODY>
+</HTML>
+

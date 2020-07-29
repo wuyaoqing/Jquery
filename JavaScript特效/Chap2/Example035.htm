@@ -1,0 +1,55 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<P>&nbsp;</P>
+<SCRIPT Language="JavaScript">
+<!--
+	var imgsrc="images\\arrow.gif";
+	var imgnumber=10;
+	for(i=1;i<=imgnumber;i++)
+	{
+		document.write('<img ID=image'+i+' src='+imgsrc+' '+
+						' STYLE="position:absolute;'+
+						'Z-INDEX:2;visibility:visible;">')
+	}
+
+	function getXpos(N)
+	{
+		return parseInt(document.all[N].style.left);
+	}
+	function getYpos(N)
+	{
+		return parseInt(document.all[N].style.top);
+	}
+
+	function moveContainer(N,DX,DY)
+	{
+		document.all[N].style.pixelLeft=DX;
+		document.all[N].style.pixelTop=DY;
+	}
+	
+	function cycle()
+	{
+		for (i=1;i<imgnumber;i++)
+		{
+			moveContainer("image"+i,getXpos("image"+(i+1)),getYpos("image"+(i+1)));
+		}
+	}
+	
+	function newPos(e)
+	{
+		moveContainer("image"+imgnumber,event.clientX-2,event.clientY-2)
+	}
+	
+	document.onmousemove=newPos;
+	setInterval("cycle()",20);
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>
+

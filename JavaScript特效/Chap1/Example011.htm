@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+
+<STYLE> .spanstyle 
+{
+	COLOR: #0066ff; FONT-FAMILY: 隶书; FONT-SIZE: 15pt; 
+	FONT-WEIGHT: normal; POSITION: absolute; TOP: -50px; 
+	VISIBILITY: visible
+}
+</STYLE>
+
+</HEAD>
+<body bgcolor="#fef4d9" onload="setInterval('makesnake()',30)">
+
+<P>&nbsp;</P>
+<SCRIPT language=javascript>
+	var message="众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。";
+	var x,y;
+	var step=18;
+
+	message=message.split("");
+	var xpos=new Array();
+	for (i=0;i<=message.length-1;i++) 
+	{
+		xpos[i]=-50;
+	}
+
+	var ypos=new Array();
+	for (i=0;i<=message.length-1;i++) 
+	{
+		ypos[i]=-50;
+	}
+
+	function MouseMove(e) 
+	{
+		x =document.body.scrollLeft+event.clientX+10;
+		y =document.body.scrollTop+event.clientY;
+	}
+
+	function makesnake() 
+	{
+		for (i=message.length-1; i>=1; i--) 
+		{
+			xpos[i]=xpos[i-1]+step;
+			ypos[i]=ypos[i-1];
+		}
+		xpos[0]=x+step;
+		ypos[0]=y;
+
+		for (i=0; i<=message.length-1; i++) 
+		{
+    		var thisspan = eval("span"+(i)+".style");
+    		thisspan.posLeft=xpos[i];
+			thisspan.posTop=ypos[i];
+    	}
+	}
+</SCRIPT>
+
+<SCRIPT language=javascript>
+	for (i=0;i<=message.length-1;i++) 
+	{
+    	document.write("<span id='span"+i+"' class='spanstyle'>");
+		document.write(message[i]);
+    	document.write("</span>");
+	}
+
+	document.onmousemove = MouseMove;
+</SCRIPT>
+</BODY>
+</HTML>
+

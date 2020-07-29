@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+
+<SCRIPT LANGUAGE=javascript FOR=document EVENT=onmousemove>
+<!--
+ document_onmousemove()
+//-->
+</SCRIPT>
+
+</HEAD>
+<BODY>
+
+<SCRIPT language=javascript>
+<!--
+	var word=new Array(6);
+	word[1]="H";word[2]="e";word[3]="l";word[4]="l";word[5]="o";word[6]="!";
+	for(i=1;i<=word.length-1;i++)
+	{
+		document.write("<div id='word"+i+"' style='width:20px;height:20px;"+
+		               "position:absolute;font-size:16;visibility:visible'>"+
+		               "<font face='Forte' color='#FF0000'>"+word[i]+
+		               "</font></div>");
+    }
+    start();
+
+	var cx=0;
+	var cy=0;
+	var val=0;
+
+	function follow(i)
+	{	
+		var x;
+		if(i<4)
+			x=cx-50+i*10;
+		else 
+			x=cx-25+i*10;
+		var y=cy-20+Math.floor(Math.random()*40);
+		w=eval("word"+i);
+		with(w.style)
+		{
+			left=x.toString()+"px";
+			top=y.toString()+"px";
+		}
+	}
+
+	function start()
+	{	
+		for(i=1;i<=word.length-1;i++)
+		{
+			setInterval("follow("+i+")",100);
+		}
+	}	
+
+//-->
+</SCRIPT>
+
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+function document_onmousemove() 
+{
+	cx=window.event.x;
+	cy=window.event.y;
+}
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>
+

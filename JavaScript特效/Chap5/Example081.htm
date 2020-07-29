@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY onclick="HideMenu();">
+<A onclick="ShowMenu();event.cancelBubble=true;return false;" 
+   href="">点这里看菜单</A>
+
+<SCRIPT Language="JavaScript">
+<!--
+function ShowMenu()
+{
+	if (mnuDIV.style.visibility=="hidden")
+	{
+		mnuDIV.filters.revealTrans.apply();
+		mnuDIV.style.visibility="visible";
+		mnuDIV.filters.revealTrans.play();
+	}
+	else
+	{
+		HideMenu();
+	}
+}
+
+function HideMenu()
+{
+		mnuDIV.filters.revealTrans.apply();
+		mnuDIV.style.visibility="hidden";
+		mnuDIV.filters.revealTrans.play();
+}
+//-->
+</SCRIPT>
+
+<DIV id="mnuDIV" style="FILTER: revealTrans(Duration=1,Transition=12); 
+                        VISIBILITY: hidden;
+                        POSITION: absolute;
+                        BORDER-RIGHT: black 1px solid; 
+                        BORDER-TOP: black 1px solid; 
+                        BORDER-LEFT: black 1px solid; 
+                        BORDER-BOTTOM: black 1px solid; 
+                        LEFT: 12px;  
+                        TOP: 35px; 
+                        BACKGROUND-COLOR: gold">
+<A href="http://www.phei.com.cn">电子工业出版社</A><BR>
+<A href="http://tqxbook.phei.com.cn/">天启星图书</A>
+</DIV>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>
+Duration: 
+<SELECT onchange="mnuDIV.filters.revealTrans.Duration=
+                  this.options[this.selectedIndex].value;"> 
+<OPTION value=.5>.5</OPTION> 
+<OPTION value=1 selected>1</OPTION> 
+<OPTION value=3>3</OPTION> 
+<OPTION value=6>6</OPTION> 
+<OPTION value=10>10</OPTION>
+</SELECT></P>
+</BODY>
+</HTML>
+
+
+
+

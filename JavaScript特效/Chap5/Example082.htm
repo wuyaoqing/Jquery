@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY onclick="HideMenu();">
+<A onclick="ShowMenu();event.cancelBubble=true;return false;" 
+   href="">点这里看菜单</A>
+
+<SCRIPT Language="JavaScript">
+<!--
+function ShowMenu()
+{
+	if (selOrientation.value=="horizontal")
+	{
+		if (selMotion.value=="in")
+		{
+			mnuDIV.filters.revealTrans.Transition=15;
+		} 
+		else
+		{
+			mnuDIV.filters.revealTrans.Transition=16;
+		}
+	}
+	else
+	{
+		if (selMotion.value=="in")
+		{
+			mnuDIV.filters.revealTrans.Transition=13;
+		} 
+		else
+		{
+			mnuDIV.filters.revealTrans.Transition=14;
+		}
+	} 
+	
+	if (mnuDIV.style.visibility=="hidden")
+	{
+		mnuDIV.filters.revealTrans.apply();
+		mnuDIV.style.visibility="visible";
+		mnuDIV.filters.revealTrans.play();
+	}
+	else
+	{
+		HideMenu();
+	}
+}
+
+function HideMenu()
+{
+		mnuDIV.filters.revealTrans.apply();
+		mnuDIV.style.visibility="hidden";
+		mnuDIV.filters.revealTrans.play();
+}
+//-->
+</SCRIPT>
+
+<DIV id="mnuDIV" style="FILTER: revealTrans(Duration=1,Transition=14); 
+                        VISIBILITY: hidden;
+                        POSITION: absolute;
+                        BORDER-RIGHT: black 1px solid; 
+                        BORDER-TOP: black 1px solid; 
+                        BORDER-LEFT: black 1px solid; 
+                        BORDER-BOTTOM: black 1px solid; 
+                        LEFT: 12px;  
+                        TOP: 35px; 
+                        BACKGROUND-COLOR: gold">
+<A href="http://www.phei.com.cn">电子工业出版社</A><BR>
+<A href="http://tqxbook.phei.com.cn/">天启星图书</A>
+</DIV>
+<P>&nbsp;</P>
+Motion: 
+<SELECT name=selMotion> 
+<OPTION value=out selected>Out</OPTION> 
+<OPTION value=in>In</OPTION>
+</SELECT> 
+<BR><BR>
+Orientation: 
+<SELECT name=selOrientation> 
+<OPTION value=horizontal>Horizontal</OPTION> 
+<OPTION value=vertical selected>Vertical</OPTION>
+</SELECT>
+</BODY>
+</HTML>
+
+
+
+

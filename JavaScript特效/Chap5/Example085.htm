@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<SCRIPT Language=JavaScript>
+<!--
+var index = 6
+link = new Array(6);
+text = new Array(6);
+
+link[0] ="http://www.phei.com.cn";
+link[1] ="http://tqxbook.phei.com.cn";
+link[2] ="http://www.phei.com.cn";
+link[3] ="http://tqxbook.phei.com.cn";
+link[4] ="http://www.phei.com.cn";
+link[5] ="http://tqxbook.phei.com.cn";
+
+text[0] ="电子工业出版社";
+text[1] ="天启星图书";
+text[2] ="电子工业出版社";
+text[3] ="天启星图书";
+text[4] ="电子工业出版社";
+text[5] ="天启星图书";
+
+document.write("<marquee scrollamount=1 scrolldelay=50 direction=up width=150 height=80>");
+for (i=0;i<index;i++)
+{
+	document.write ("<A href="+link[i]+">"+text[i] + "</A><br>");
+}
+document.write ("</marquee>")
+// -->
+</SCRIPT>
+</BODY>
+</HTML>

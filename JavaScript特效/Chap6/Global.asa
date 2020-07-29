@@ -1,0 +1,23 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+'定义初始的在线用户数目
+Sub Application_OnStart
+	session.Timeout =10
+	application.Lock 
+	application("num")=0
+	application.UnLock	 
+End Sub
+
+'当有一个Session期间开始，将在线人数加1
+Sub Session_OnStart
+	application.Lock 
+	application("num")=application("num")+1
+	application.UnLock 
+End sub
+
+'当有一个Session期间结束，将在线人数减1
+Sub Session_OnEnd
+	application.Lock 
+	application("num")=application("num")-1
+	application.UnLock 
+End sub
+</SCRIPT>

@@ -1,0 +1,62 @@
+<HTML xmlns:MSHelp=http://msdn.microsoft.com/msHelp>
+<HEAD>
+<TITLE>Iris Transition</TITLE>
+
+<SCRIPT>
+var bTranState = 0;
+function fnToggle() 
+{
+	oTransContainer.filters[0].Apply();
+    if (bTranState=='0') 
+    { 
+		bTranState = 1;
+        image2.style.visibility="visible"; 
+		image1.style.visibility="hidden";   
+	}
+    else 
+    {  
+		bTranState = 0;
+        image2.style.visibility="hidden"; 
+		image1.style.visibility="visible";  
+	}
+   	oTransContainer.filters[0].Play();
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<B> IrisStyle:</B>  
+<SELECT onchange="oTransContainer.filters.item(&#13;&#10;
+                  'DXImageTransform.Microsoft.Iris').irisStyle=
+                   &#13;&#10;
+                   this.options[this.selectedIndex].value;&#13;&#10;                   fnToggle();">
+<OPTION VALUE="CIRCLE" selected>Circle</OPTION>
+<OPTION VALUE="CROSS">Cross</OPTION>
+<OPTION VALUE="PLUS">Plus</OPTION>
+<OPTION VALUE="SQUARE">Square</OPTION>
+<OPTION VALUE="STAR">Star</OPTION>
+</SELECT>
+&nbsp;&nbsp;&nbsp;
+<B> Motion:</B>  
+<SELECT onchange="oTransContainer.filters.item(&#13;&#10;
+                  'DXImageTransform.Microsoft.Iris').motion=
+                   &#13;&#10;
+                   this.options[this.selectedIndex].value;&#13;&#10;                   fnToggle();">
+                   
+<OPTION VALUE="out" selected>Out</OPTION>
+<OPTION VALUE="in">In</OPTION>
+</SELECT>
+
+<DIV ID="oTransContainer" 
+     STYLE="FILTER: progid:DXImageTransform.Microsoft.Iris(irisStyle=CIRCLE);
+            LEFT: 10px; WIDTH: 258px; POSITION: absolute; TOP: 40px; HEIGHT: 196px">
+<IMG style="POSITION: absolute" 
+     src="images/yushu.jpg" 
+     name=image1>
+<IMG style="LEFT: 31px; VISIBILITY: hidden; POSITION: absolute; TOP: 
+     11px" 
+     src="images/qianniu.jpg" name=image2 >
+</DIV>
+</BODY>
+</HTML>
+

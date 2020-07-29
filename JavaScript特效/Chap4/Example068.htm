@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<TITLE>Glow Filter</TITLE>
+</HEAD>
+
+<BODY>
+<IMG style="FILTER:
+	 progid:DXImageTransform.Microsoft.Glow(color=red,strength='5')" 
+	 src="images/fruit.jpg" 
+	 name=filterIMG>
+<HR>
+
+<B>Strength:</B> 
+<SELECT onchange="filterIMG.filters.item(
+                  'DXImageTransform.Microsoft.Glow').Strength=
+                  this.options[this.selectedIndex].value"> 
+<OPTION value=1>1</OPTION>
+<OPTION value=3>3</OPTION>
+<OPTION value=5 selected>5</OPTION>
+<OPTION value=10>10</OPTION> 
+<OPTION value=20>20</OPTION>
+</SELECT>
+
+&nbsp;&nbsp;&nbsp;
+<B>Color:</B> 
+<SELECT onchange="filterIMG.filters.item(
+                  'DXImageTransform.Microsoft.Glow').color=
+                  this.options[this.selectedIndex].value"> 
+<OPTION value="gray">Gray</OPTION>
+<OPTION value="black">Black</OPTION> 
+<OPTION value="blue">Blue</OPTION> 
+<OPTION value="red" selected>Red</OPTION> 
+<OPTION value="yellowgreen">Yellow-green</OPTION> 
+<OPTION value="gold">Gold</OPTION>
+</SELECT>
+</BODY>
+</HTML>
+
