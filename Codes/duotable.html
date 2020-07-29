@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery1.8.3.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+		<table border="" cellspacing="" cellpadding="" name='table1'>
+			<tr><th>table1th</th></tr>
+			<tr>
+				<table border="" cellspacing="" cellpadding="" name='table2'>
+				<tr><th>table2th</th></tr>
+				<tr name='tr3'><td name='td3'><span>点击我table2</span></td></tr>
+				<tr>
+					<table border="" cellspacing="" cellpadding="" name='table3'>
+						<tbody name='table3body'>
+						<tr name='tr3'><td name='td3'><span onclick="test(this)">点击我</span></td></tr>
+						</tbody>
+					</table>
+				</tr>
+				<tr>
+					<table border="" cellspacing="" cellpadding="" name='table4'>
+						<tbody name='table4body'>
+						<tr name='tr4'><td name='td4'><span onclick="test(this)">点击我4</span></td></tr>
+						</tbody>
+					</table>
+				</tr>
+				</table>
+			</tr>
+		</table>
+		<script type="text/javascript" charset="utf-8">
+		function test(obj)
+		{
+			alert($(obj).html());
+			$(obj).parents("table").append("<tr><td><span>增加的tr</span></td></tr>");
+		}
+//			$(function(){
+//				$("span").click(function(){
+//					//alert($(this).parents().length);
+//				  //alert($(this).text()); 
+//				  alert($(this).parents("table").attr('name'));
+//				  $(this).parents("table").append("<tr><td><span>增加的tr</span></td></tr>");
+//			    });
+//			});
+			
+		</script>
+	</body>
+</html>

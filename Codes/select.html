@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="zh-CN" />
+  <META NAME="Description" CONTENT="">
+  <script src="js/jquery1.6.2.js"> </script>
+ </HEAD>
+
+ <BODY>
+  <select id='sel'>
+  <option value='-1'   >请选择...</option>
+  </select>
+  <select id='x'>
+  <option value='-1'   >请选择...</option>
+  </select>
+  <input type='button' value='add' onclick='Add()'/>
+ </BODY>
+ <script>
+  function getValue(obj)
+  {
+	$('#x option').remove();
+	for(var i=1;i<=obj.value;i++)
+	{
+		 
+		var  op="<option value="+i+" >增加的option"+i+"</option>";
+		 $('#x').append(op);
+	}
+  }
+ function Add()
+ {
+	
+	for(var i=1;i<=3;i++)
+	{
+		
+		var  op="<option value="+i+" onclick='getValue(this)'>增加的option"+i+"</option>";
+		 $('#sel').append(op);
+	}
+	//alert('test');
+   // $('#sel').append("<option value='asdas'>增加的option</option>");
+ }
+ 
+   $(function (){
+     //----------对地址操作,focus()，blur()相当于js的onfocus(),onblur()
+     $("#address").focus(function (){
+	 var $addressValue=$(this).val();//取得值
+	 if($addressValue=="请输入邮箱地址")
+		{
+			$(this).val("");  //设置值
+		}
+	 
+	 });
+   
+   $("#address").blur(function (){
+	 var $addressValue=$(this).val();//取得值
+	 if($addressValue=="")
+		{
+			$(this).val("请输入邮箱地址");  //设置值
+		}
+	 
+	 });
+   //-----------
+   });
+  </script>
+</HTML>

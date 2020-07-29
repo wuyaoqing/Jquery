@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery1.6.2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<select>
+			<option hi='1'>1</option>
+			<option hi='2'>2</option>
+			<option hi='3'>3</option>
+			<option hi='4'>4</option>
+		</select>
+		<button>tets</button>
+		<font color="#FF0000" size="4" face="courier new">sdas</font>
+		2<sup>3</sup>
+		2<sub>3</sub>
+	</body>
+	<script type="text/javascript">
+		$("button").click(function(){
+			$.each($("select>option"), function() {
+				if($(this).text()==$("select").val())
+				{
+					alert($(this).attr('hi'));
+				}
+			});
+			
+		});
+	</script>
+</html>

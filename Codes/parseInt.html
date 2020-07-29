@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="zh-CN" />
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+	<script src="jquery1.6.2.js"> </script>
+	<link rel="stylesheet" href="style/.css" type="text/css" />
+</head>
+<body>
+<input type="text" id="inNum" onchange="text()"/>
+<input type="button" onclick="say()" value="say"/>
+<table>
+	<tr>
+		<td  style="background-color:#FF69A2; width:90px;height:100px;" >adsa</td>
+		
+	</tr>
+	
+</table>
+</body>
+<script type="text/javascript">
+function text()
+{
+	alert($("#inNum").val());
+}
+function say()
+{
+	alert(parseInt($("#inNum").val()));
+}
+</script>
+</html>

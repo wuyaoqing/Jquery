@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery1.6.2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="checkbox" value="test"  id='testchk'/>
+		<button>test</button>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$("button").click(function(){
+				if($("#testchk").attr("checked"))
+				{
+					alert($("#testchk").val());
+				}else
+				{
+					alert('in');
+				}
+				
+			});
+		});
+	</script>
+</html>

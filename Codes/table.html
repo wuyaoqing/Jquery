@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery1.6.2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<table id="tb" border="1" cellspacing="" cellpadding="1">
+			<tbody>
+				<thead>
+					<th>a</th>
+				<th>b</th>
+				</thead>
+				
+			
+			<tr>
+				<td><input type="text" name="a" id="1-1" value="" /></td>
+				<td><input type="text" name="b" id="1-2" value="" /></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="a" id="2-1" value="" /></td>
+				<td><input type="text" name="b" id="2-2" value="" /></td>
+			</tr>
+			<tr><td><input type="text" name="a" id="3-1" value="" /></td>
+				<td><input type="text" name="b" id="3-2" value="" /></td>
+			</tr>
+			</tbody>
+		</table>
+		<p></p>
+		<p id='p2'></p>
+		<input type="hidden" id="hdn" />
+	</body>
+	<script type="text/javascript">
+		//alert("表格的行数"+document.getElementById("tb").rows.length); 
+		//alert("列数："+document.getElementById("tb").rows[0].cells.length);
+		//		jquery方式
+		
+		$(function(){
+			$(":input[type=text]").focus(function(){
+				//alert($(this).attr("id"));
+				$("p").html($(this).attr("id"));
+				$("#hdn:hidden").val($(this).attr("id"));
+			});
+			//监听键盘
+			document.onkeydown=function (){
+				key=event.keyCode;
+				if(key==37)alert('点击了左键');
+				if(key==38)//点击了上键
+				//$("#p2").html($("#hdn:hidden").val());
+				var CurrentId=$("#hdn:hidden").val();
+				var CurrentRow=CurrentId.substring(0,CurrentId.indexOf('-'));
+				var CurrentCol=CurrentId.substr(CurrentId.indexOf('-')+1);
+				
+				//alert($("#hdn:hidden").val());
+				if(key==39)alert('点击了右键');
+				if(key==40)alert('点击了下键');
+			};
+			
+		});
+	</script>
+</html>

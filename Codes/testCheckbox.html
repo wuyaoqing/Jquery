@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script src="jquery1.6.2.js"> </script>
+ </HEAD>
+
+ <BODY>
+  <input type="checkbox"/>
+   <input type="checkbox"/>
+    <input type="checkbox"/>
+	 <input type="checkbox"/>
+  <input type="button" value="checkbox全选" onclick="getValue()"/>
+ </BODY>
+<script>
+$(function (){
+  
+ });
+function getValue()
+{
+ $(":checkbox").each(function(){
+	this.checked=true;
+ });
+}
+
+</script>
+</HTML>

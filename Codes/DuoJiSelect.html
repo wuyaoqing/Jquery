@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery1.6.2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		 <select name='_BonusStandard' id='SelPro' onchange='getVal()'>
+		   <option value='-1' selected='true'>请选择省..</option>
+		   <option value='gd' >广东省</option>
+		   <option value='gx' >广西省</option>
+		  </select>
+		  <select name='_BonusStandard' id='SelCity'>
+		   <option value='-1' selected='true'>请选择市..</option>
+		  </select>
+		  <input type="button" name="get" id="get" onclick="getAll()" value="设置下拉值" />
+	</body>
+	<script type="text/javascript">
+		function getAll()
+		{
+		  //设置单个值
+		  //$("#sel1").val("gd");
+		  //遍历下拉赋值
+		  $("select").each(function(i,el){
+		  	$(this).val("sc");
+		  });
+		}
+		//
+		function getVal()
+		{
+			var sheng= $("#SelPro option:selected").val();
+			switch(sheng)
+			{
+				case 'gd':
+				$("#SelCity").empty();
+				$("#SelCity").append("<option value='qy' >清远市</option>").append("<option value='gz' >广州市</option>");
+				break;
+				case 'gx':
+				$("#SelCity").empty();
+				$("#SelCity").append("<option value='gl' >桂林市</option>").append("<option value='nn' >南宁市</option>");
+				break;
+			}
+		}
+	</script>
+</html>

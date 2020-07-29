@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery1.6.2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input name="man-news" />
+		<input name="milkman" />
+		<input name="letterman2" />
+		<input name="newmilk" />
+<script type="text/javascript">
+	    $("input[name *='man']").each(function(){
+	    	$(this).addClass('right');
+	    	$(this).val(1);
+	    });
+	    $("input").each(function(){
+	    	if(!$(this).hasClass('right'))
+	    	{
+	    		$(this).val(2);
+	    	}
+	    });
+</script>
+	</body>
+</html>

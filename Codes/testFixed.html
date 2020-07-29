@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery1.6.2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			
+			var val="10.13";
+			 val=parseInt(val[val.length-1]);//获取最后一位小数
+			alert(val);
+			return false;
+			var resultStr=""+val;
+               //var LastValue=parseInt(resultStr[resultStr.length-1]);//获取最后一位小数
+               if(LastValue>=6)
+               {
+                 //result =Math.ceil(); 
+                 alert(val.toFixed(1));
+                  alert(LastValue);
+               }
+               else
+               { alert(LastValue);
+               	alert(val-(parseFloat("0.0"+LastValue)).toFixed(1));
+               }
+               //alert(LastValue);
+			//alert(val.toFixed(2)); //12345.68 返回
+		});
+	</script>
+</html>

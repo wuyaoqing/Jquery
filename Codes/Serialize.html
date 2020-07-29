@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/jquery1.6.2.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<script type="text/javascript">
+			$(function(){
+				$("#test").click(function(){
+					var s=$("#Form").serialize();
+					$("#result").html(s);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<form id="Form">
+		<input type="text" name="in"  />
+		<input type="text" name="in"   />
+		<input type="button" id="test" value="序列化"/>
+		<div id="result"></div>
+		</form>
+	</body>
+</html>

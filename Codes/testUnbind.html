@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>去除点击的事件</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="zh-CN" />
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+	<script src="js/jquery1.6.2.js"> </script>
+	<link rel="stylesheet" href="style/.css" type="text/css" />
+</head>
+<body>
+<input type="button" id='cancelClick' value='去除事件' onclick='cancel()'/>
+<input type="button" id='check' value='检查' onclick='checkIn()'/>
+<input type="button" id='rebind' value='重新绑定方法' onclick='Rebind()'/>
+<input type="button" id='runTest2' value='调用test2方法' onclick='msg2()'/>
+</body>
+<script type="text/javascript">
+var msg=function test(){alert("你已经不能点击了");};
+var msg2=function test2(){alert("重新绑定");};
+	function checkIn()
+	{
+	alert('你点击了我');
+	}
+	
+	function cancel()
+	{
+	  $("#check").removeAttr("onclick").bind("click",msg);		
+	}
+	function Rebind()
+	{
+	  $("#check").unbind('click').bind('click',msg2);	
+	}
+	
+</script>
+</html>

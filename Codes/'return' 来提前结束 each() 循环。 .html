@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Language" content="zh-CN" />
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="style/.css" type="text/css" />
+	<style>  
+	div { width:40px; height:40px; margin:5px; float:left;  
+	border:2px blue solid; text-align:center; }
+	span { color:red; }
+	</style>
+</head>
+<body>
+  <button>Change colors</button>
+  <span></span>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div id="stop">Stop here</div>
+  <div></div>
+  <div></div>
+  <div></div>
+ <script>
+  $( "button" ).click(function () {
+  $( "div" ).each(function ( index, domEle) {
+  // domEle == this28. 
+  $( domEle ).css( "backgroundColor", "yellow" );
+  if ( $(this).is( "#stop" ) ) {
+  $( "span" ).text( "Stopped at div index #" + index );
+  return false; }
+  });
+  });
+</script></body>
+</html>

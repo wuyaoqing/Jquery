@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery1.6.2.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		 <select name='_BonusStandard' id='sel1'>
+		   <option value='-1' selected='true'>请选择..</option>
+		   <option value='gd' onclick='getval()'>广东省</option>
+		   <option value='sc'  onclick='getval()'>四川省</option>
+		  </select>
+		  <select name='_BonusStandard'>
+		   <option value='-1' selected='true'>请选择..</option>
+		   <option value='gd' onclick='getval()'>广东省</option>
+		   <option value='sc'  onclick='getval()'>四川省</option>
+		  </select>
+		  <input type="button" name="get" id="get" onclick="getAll()" value="设置下拉值" />
+	</body>
+	<script type="text/javascript">
+		function getAll()
+		{
+		  //设置单个值
+		  //$("#sel1").val("gd");
+		  //遍历下拉赋值
+		  $("select").each(function(i,el){
+		  	$(this).val("sc");
+		  });
+		}
+	</script>
+</html>

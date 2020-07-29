@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>多级菜单</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<meta http-equiv="Content-Language" content="zh-CN" />
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+	
+	<link rel="stylesheet" href="style/.css" type="text/css" />
+</head>
+<body>
+<select id='proc' onchange='changeCity()'>
+   <option value='1' selected='true' >等级一</option>
+  <option value='2' >等级二</option>
+  </select>
+  <select id='city'>
+  <option value='-1' selected='true'>120-150</option>
+ <option value='-1' >80-120</option>
+ <option value='-1' >50-80</option>
+ <option value='-1' >0-50</option>
+ </select>
+</body>
+<script type="text/javascript">
+var objProc=document.getElementById("proc");
+var objCity=document.getElementById("city");
+function changeCity(){
+//var index=objProc.selectedIndex;//下拉索引
+//alert('hi');
+//objCity.options.length=0;
+ $('#city option').remove();
+
+var  op0="<option value='0'>150-200</option>";
+var  op1="<option value='1'>100-150</option>";
+var  op2="<option value='2'>0-100</option>";
+var  op3="<option value='3'>技术员</option>";
+var  op4="<option value='4'>专员</option>";
+$('#city').append(op0);
+$('#city').append(op1);
+$('#city').append(op2);
+$('#city').append(op3);
+$('#city').append(op4);
+
+
+}
+</script>
+</html>

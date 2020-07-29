@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	</head> 
+	<body>
+		<input type="button" id="get" value="获取json" />
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$("#get").click(function(){
+				  $.ajax({
+				        type: "post",
+				        url: "http://localhost:53261/api/Default/SaveData",
+						headers: {
+						       Authorization:"bearer SJjNGn8aaWYUpuIwQhE-VPWvYM_BzI1YvyXi8XLKmv0VCJQZVGaXIrMOV1er9n9-DpZs-mybfhaPZ_0FOCSELQ5oor7xfveCEcmanDUZEt05hBIEY1upO3Mev7LukQXgWc0VTnKQ8oPz0U9oh4w-e8ql2JxAlf2IYSXrv4QvOvgGtOyGlEKHkhGksJJ9uIt7Zlq74kw-frjPdU7LHw8tdyDGR12pDinhJfURnq8MzPpr0O02s1JU3rPjmytGl4w1gmOdSlGA_Vxiw8teYhioOBobSzZSTfDKZLOQyneR-O4"
+						    },
+				        contentType: 'application/json',
+				        data: JSON.stringify({ NAME: "Jim",DES:"备注" }),
+				        success: function(data, textStatus, jqXHR) {
+							console.log("服务器返回:"+data);
+						},
+						error:function (jqXHR, textStatus, errorThrown) {
+									console.log(jqXHR.responseText);
+									console.log(JSON.parse(jqXHR.responseText).Message)
+						}
+				    });		
+			});
+			
+			
+		});
+	</script>
+	
+</html>
