@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		 <input type="text" value="这一行文字的焦点这里我对文本框的属性做了一">
+		 <button>按钮</button>
+			
+			
+		<script type="text/javascript">
+		
+	  
+			$(function(){
+				 $("button").click(function(event) {
+				         $("input").focus();//使input获取焦点
+				         var result=$("input").val();//对input取值
+				         $("input").val("")//使input的值为空
+				         $("input").val(result);//重新负值
+				         $("input")[0].scrollLeft=700;//这里我对文本框的属性做了一个猜想，应该是有混动条的属性的，所以进行一个偏移
+				     });
+				
+			})
+		</script>
+		
+	</body>
+</html>
